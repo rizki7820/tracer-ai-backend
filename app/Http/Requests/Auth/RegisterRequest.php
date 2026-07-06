@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Requests\Auth;
+use App\Enums\RoleEnum;
+use Illuminate\Validation\Rules\Enum;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -20,7 +22,10 @@ class RegisterRequest extends FormRequest
 
             'password'=>'required|min:8|confirmed',
 
-            'role'=>'required|in:admin,alumni,company'
+            'role' => [
+                'required',
+                new Enum(RoleEnum::class),
+            ],
         ];
     }
 }

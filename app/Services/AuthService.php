@@ -6,6 +6,7 @@ use App\Interfaces\UserRepositoryInterface;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
 use App\Http\Resources\UserResource;
+use App\Enums\RoleEnum;
 
 class AuthService
 {
@@ -18,7 +19,14 @@ class AuthService
     {
         $data['password'] = Hash::make($data['password']);
 
+        $role = RoleEnum::from($data['role']);
+
+
+        unset($data['role']);
+
         $user = $this->userRepository->create($data);
+
+        $user->assignRole($role->value);
 
         $token = $user->createToken('auth_token')->plainTextToken;
 
