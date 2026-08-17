@@ -1,0 +1,681 @@
+/* =========================================================
+   NOTIFICATION POPUP
+   TRACER ALUMNI - TELKOM SCHOOLS
+========================================================= */
+
+
+/* =========================================================
+   POPUP CONTAINER
+========================================================= */
+
+.notification-popup {
+    position: absolute;
+
+    top: calc(100% + 12px);
+    right: 0;
+
+    width: 370px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+
+    box-shadow:
+        0 18px 45px rgba(20, 24, 40, 0.14);
+
+    overflow: hidden;
+
+    z-index: 1300;
+
+    animation: notificationPopupIn 0.18s ease;
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes notificationPopupIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.notification-popup-header {
+    min-height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 18px;
+
+    border-bottom: 1px solid #eef0f3;
+}
+
+
+.notification-popup-header > div {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.notification-popup-header h3 {
+    margin: 0;
+
+    color: #25272d;
+
+    font-size: 15px;
+    font-weight: 750;
+
+    line-height: 1.3;
+}
+
+
+.notification-popup-header span {
+    margin-top: 4px;
+
+    color: #9297a0;
+
+    font-size: 10px;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   NOTIFICATION LIST
+========================================================= */
+
+.notification-list {
+    max-height: 390px;
+
+    overflow-y: auto;
+}
+
+
+/* =========================================================
+   NOTIFICATION ITEM
+========================================================= */
+
+.notification-item {
+    width: 100%;
+
+    min-height: 92px;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 14px 17px;
+
+    border: none;
+    border-bottom: 1px solid #f0f1f4;
+
+    background: #ffffff;
+
+    font-family: inherit;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease;
+}
+
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+
+.notification-item:hover {
+    background: #f8f9fb;
+}
+
+
+/* =========================================================
+   UNREAD
+========================================================= */
+
+.notification-item.unread {
+    background: #fafaff;
+}
+
+
+.notification-item.unread:hover {
+    background: #f5f5ff;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.notification-icon {
+    width: 39px;
+    height: 39px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+}
+
+
+.notification-icon svg {
+    width: 19px;
+    height: 19px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   ICON COLORS
+========================================================= */
+
+.notification-icon.alumni {
+    background: #eef0ff;
+    color: #665cff;
+}
+
+
+.notification-icon.tracer {
+    background: #fff4df;
+    color: #d68a00;
+}
+
+
+.notification-icon.company {
+    background: #eaf8f1;
+    color: #249661;
+}
+
+
+.notification-icon.report {
+    background: #f1edff;
+    color: #7959d6;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.notification-content {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.notification-title-row {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    min-width: 0;
+}
+
+
+.notification-title-row strong {
+    overflow: hidden;
+
+    color: #30323a;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.notification-unread-dot {
+    width: 6px;
+    height: 6px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #665cff;
+}
+
+
+.notification-content p {
+    margin: 4px 0 0;
+
+    color: #747983;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    overflow: hidden;
+}
+
+
+.notification-time {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #a0a4ac;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.notification-empty {
+    min-height: 210px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    text-align: center;
+}
+
+
+.notification-empty-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 12px;
+
+    border-radius: 50%;
+
+    background: #f1f2f5;
+
+    color: #9ca1aa;
+}
+
+
+.notification-empty-icon svg {
+    width: 22px;
+    height: 22px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+.notification-empty strong {
+    color: #44474f;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.notification-empty span {
+    margin-top: 4px;
+
+    color: #999ea7;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.notification-popup-footer {
+    padding: 10px;
+
+    border-top: 1px solid #eef0f3;
+
+    background: #ffffff;
+}
+
+
+.notification-popup-footer button {
+    width: 100%;
+
+    min-height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #665cff;
+
+    font-family: inherit;
+
+    font-size: 11px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.notification-popup-footer button:hover {
+    background: #f1f0ff;
+
+    color: #554be6;
+}
+
+
+.notification-popup-footer svg {
+    width: 14px;
+    height: 14px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 2;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.notification-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+.notification-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+.notification-list::-webkit-scrollbar-thumb {
+    background: #d9dce2;
+
+    border-radius: 999px;
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+.admin-dashboard.dark-mode .notification-popup {
+    background: #1f2229;
+
+    border-color: #30343d;
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.35);
+}
+
+
+.admin-dashboard.dark-mode
+.notification-popup-header {
+    border-color: #30343d;
+}
+
+
+.admin-dashboard.dark-mode
+.notification-popup-header h3 {
+    color: #eeeeef;
+}
+
+
+.admin-dashboard.dark-mode
+.notification-popup-header span {
+    color: #90959f;
+}
+
+
+/* =========================================================
+   DARK MODE ITEM
+========================================================= */
+
+.admin-dashboard.dark-mode
+.notification-item {
+    background: #1f2229;
+
+    border-color: #2c3038;
+}
+
+
+.admin-dashboard.dark-mode
+.notification-item:hover {
+    background: #292c34;
+}
+
+
+.admin-dashboard.dark-mode
+.notification-item.unread {
+    background: #23252e;
+}
+
+
+.admin-dashboard.dark-mode
+.notification-item.unread:hover {
+    background: #292c34;
+}
+
+
+.admin-dashboard.dark-mode
+.notification-title-row strong {
+    color: #eeeeef;
+}
+
+
+.admin-dashboard.dark-mode
+.notification-content p {
+    color: #a4a9b2;
+}
+
+
+.admin-dashboard.dark-mode
+.notification-time {
+    color: #7f858f;
+}
+
+
+/* =========================================================
+   DARK ICONS
+========================================================= */
+
+.admin-dashboard.dark-mode
+.notification-icon.alumni {
+    background: rgba(102, 92, 255, 0.15);
+
+    color: #958eff;
+}
+
+
+.admin-dashboard.dark-mode
+.notification-icon.tracer {
+    background: rgba(214, 138, 0, 0.15);
+
+    color: #e5a536;
+}
+
+
+.admin-dashboard.dark-mode
+.notification-icon.company {
+    background: rgba(36, 150, 97, 0.15);
+
+    color: #48bb83;
+}
+
+
+.admin-dashboard.dark-mode
+.notification-icon.report {
+    background: rgba(121, 89, 214, 0.15);
+
+    color: #a283e8;
+}
+
+
+/* =========================================================
+   DARK FOOTER
+========================================================= */
+
+.admin-dashboard.dark-mode
+.notification-popup-footer {
+    background: #1f2229;
+
+    border-color: #30343d;
+}
+
+
+.admin-dashboard.dark-mode
+.notification-popup-footer button {
+    color: #958eff;
+}
+
+
+.admin-dashboard.dark-mode
+.notification-popup-footer button:hover {
+    background: rgba(102, 92, 255, 0.12);
+
+    color: #a29cff;
+}
+
+
+/* =========================================================
+   DARK EMPTY STATE
+========================================================= */
+
+.admin-dashboard.dark-mode
+.notification-empty-icon {
+    background: #292c34;
+
+    color: #858b95;
+}
+
+
+.admin-dashboard.dark-mode
+.notification-empty strong {
+    color: #eeeeef;
+}
+
+
+.admin-dashboard.dark-mode
+.notification-empty span {
+    color: #858b95;
+}
+
+
+/* =========================================================
+   DARK SCROLLBAR
+========================================================= */
+
+.admin-dashboard.dark-mode
+.notification-list::-webkit-scrollbar-thumb {
+    background: #393d46;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .notification-popup {
+        position: fixed;
+
+        top: 68px;
+        right: 12px;
+
+        width: min(
+            370px,
+            calc(100vw - 24px)
+        );
+
+        max-height: calc(100vh - 85px);
+    }
+
+
+    .notification-list {
+        max-height: calc(100vh - 210px);
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .notification-popup {
+        right: 10px;
+
+        width: calc(100vw - 20px);
+    }
+
+
+    .notification-item {
+        padding: 13px 14px;
+    }
+
+
+    .notification-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+}
