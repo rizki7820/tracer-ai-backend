@@ -10,7 +10,7 @@
         content="width=device-width, initial-scale=1.0">
 
     <title>
-        PORTAL INFORMASI ALUMNI
+        PORTAL INFORMASI ALUMNI - LOWONGAN KERJA
     </title>
 
     @viteReactRefresh

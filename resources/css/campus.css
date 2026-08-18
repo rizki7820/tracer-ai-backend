@@ -1,14 +1,4 @@
-
-/* =========================================================
-   CAMPUS PAGE
-   TRACER ALUMNI - TELKOM SCHOOLS
-   ========================================================= */
-
-
-/* =========================================================
-   RESET
-   ========================================================= */
-
+/*RESET*/
 .campus-page,
 .campus-page * {
     box-sizing: border-box;
@@ -29,10 +19,7 @@
 }
 
 
-/* =========================================================
-   PAGE HEADER
-   ========================================================= */
-
+/*PAGE HEADER*/
 .campus-header {
     display: flex;
     align-items: center;
@@ -52,11 +39,9 @@
     width: 48px;
     height: 48px;
     flex: 0 0 48px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 13px;
     background: #fff0f1;
     color: #d71920;
@@ -88,31 +73,22 @@
 }
 
 
-/* =========================================================
-   ADD BUTTON
-   ========================================================= */
-
+/*ADD BUTTON*/
 .campus-add-button {
     height: 42px;
     padding: 0 17px;
-
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-
     border: 0;
     border-radius: 9px;
-
     background: #d71920;
     color: #ffffff;
-
     font-family: inherit;
     font-size: 13px;
     font-weight: 600;
-
     cursor: pointer;
-
     transition:
         background .2s ease,
         transform .2s ease,
@@ -132,7 +108,6 @@
 .campus-add-button svg {
     width: 17px;
     height: 17px;
-
     fill: none;
     stroke: currentColor;
     stroke-width: 2;
@@ -140,10 +115,7 @@
 }
 
 
-/* =========================================================
-   STATISTICS
-   ========================================================= */
-
+/*STATISTICS*/
 .campus-stat-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -154,15 +126,12 @@
 .campus-stat-card {
     min-height: 108px;
     padding: 18px;
-
     display: flex;
     align-items: center;
     gap: 14px;
-
     background: #ffffff;
     border: 1px solid #eeeeee;
     border-radius: 12px;
-
     box-shadow: 0 2px 7px rgba(0, 0, 0, .025);
 }
 
@@ -170,18 +139,15 @@
     width: 44px;
     height: 44px;
     flex: 0 0 44px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 11px;
 }
 
 .campus-stat-icon svg {
     width: 21px;
     height: 21px;
-
     fill: none;
     stroke: currentColor;
     stroke-width: 1.8;
@@ -211,14 +177,12 @@
 
 .campus-stat-content {
     min-width: 0;
-
     display: flex;
     flex-direction: column;
 }
 
 .campus-stat-content > span {
     margin-bottom: 3px;
-
     font-size: 12px;
     font-weight: 500;
     color: #777777;
@@ -233,41 +197,30 @@
 
 .campus-stat-content small {
     margin-top: 3px;
-
     font-size: 11px;
     line-height: 1.3;
     color: #9a9a9a;
 }
 
 
-/* =========================================================
-   TABLE CARD
-   ========================================================= */
-
+/*TABLE CARD*/
 .campus-table-card {
     overflow: hidden;
-
     background: #ffffff;
     border: 1px solid #eeeeee;
     border-radius: 13px;
-
     box-shadow: 0 2px 8px rgba(0, 0, 0, .025);
 }
 
 
-/* =========================================================
-   TABLE HEADER
-   ========================================================= */
-
+/*TABLE HEADER*/
 .campus-table-header {
     padding: 20px 22px 17px;
-
     border-bottom: 1px solid #f0f0f0;
 }
 
 .campus-table-header h3 {
     margin: 0 0 4px;
-
     font-size: 16px;
     font-weight: 700;
     color: #252525;
@@ -275,25 +228,19 @@
 
 .campus-table-header p {
     margin: 0;
-
     font-size: 12px;
     color: #858585;
 }
 
 
-/* =========================================================
-   TOOLBAR
-   ========================================================= */
-
+/*TOOLBAR*/
 .campus-toolbar {
     min-height: 72px;
     padding: 14px 22px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 18px;
-
     border-bottom: 1px solid #f0f0f0;
 }
 
@@ -306,17 +253,13 @@
     width: 100%;
     max-width: 430px;
     height: 39px;
-
     display: flex;
     align-items: center;
     gap: 9px;
-
     padding: 0 12px;
-
     background: #fafafa;
     border: 1px solid #e4e4e4;
     border-radius: 8px;
-
     transition:
         border-color .2s ease,
         box-shadow .2s ease,
@@ -332,9 +275,7 @@
 .campus-search svg {
     width: 17px;
     height: 17px;
-
     flex: 0 0 17px;
-
     fill: none;
     stroke: #929292;
     stroke-width: 1.8;
@@ -344,11 +285,9 @@
 .campus-search input {
     width: 100%;
     min-width: 0;
-
     border: 0;
     outline: 0;
     background: transparent;
-
     font-family: inherit;
     font-size: 12px;
     color: #333333;
@@ -359,10 +298,7 @@
 }
 
 
-/* =========================================================
-   FILTER
-   ========================================================= */
-
+/*FILTER*/
 .campus-filter {
     display: flex;
     align-items: center;
@@ -384,22 +320,16 @@
 .campus-filter-item select {
     min-width: 125px;
     height: 36px;
-
     padding: 0 30px 0 10px;
-
     border: 1px solid #e2e2e2;
     border-radius: 7px;
-
     background-color: #ffffff;
     color: #444444;
-
     font-family: inherit;
     font-size: 11px;
     font-weight: 500;
-
     outline: none;
     cursor: pointer;
-
     transition: border-color .2s ease;
 }
 
@@ -408,10 +338,7 @@
 }
 
 
-/* =========================================================
-   TABLE WRAPPER
-   ========================================================= */
-
+/*TABLE WRAPPER*/
 .campus-table-wrapper {
     width: 100%;
     overflow-x: auto;
@@ -420,7 +347,6 @@
 .campus-table {
     width: 100%;
     min-width: 850px;
-
     border-collapse: collapse;
     table-layout: fixed;
 }
@@ -428,12 +354,9 @@
 .campus-table th {
     height: 43px;
     padding: 0 18px;
-
     background: #fafafa;
     border-bottom: 1px solid #eeeeee;
-
     text-align: left;
-
     font-size: 10px;
     font-weight: 700;
     letter-spacing: .04em;
@@ -467,11 +390,8 @@
 .campus-table td {
     height: 72px;
     padding: 10px 18px;
-
     border-bottom: 1px solid #f1f1f1;
-
     vertical-align: middle;
-
     font-size: 12px;
     color: #444444;
 }
@@ -489,15 +409,11 @@
 }
 
 
-/* =========================================================
-   CAMPUS NAME
-   ========================================================= */
-
+/*CAMPUS NAME*/
 .campus-name-cell {
     display: flex;
     align-items: center;
     gap: 11px;
-
     min-width: 0;
 }
 
@@ -505,13 +421,10 @@
     width: 38px;
     height: 38px;
     flex: 0 0 38px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 9px;
-
     background: #fff0f1;
     color: #d71920;
 }
@@ -519,7 +432,6 @@
 .campus-avatar svg {
     width: 19px;
     height: 19px;
-
     fill: none;
     stroke: currentColor;
     stroke-width: 1.7;
@@ -529,56 +441,42 @@
 
 .campus-name-content {
     min-width: 0;
-
     display: flex;
     flex-direction: column;
 }
 
 .campus-name-content strong {
     overflow: hidden;
-
     font-size: 12px;
     font-weight: 650;
     line-height: 1.35;
     color: #303030;
-
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
 .campus-name-content span {
     margin-top: 2px;
-
     font-size: 10px;
     color: #999999;
 }
 
 
-/* =========================================================
-   TYPE BADGE
-   ========================================================= */
-
+/*TYPE BADGE*/
 .campus-type-badge {
     display: inline-flex;
     align-items: center;
-
     min-height: 25px;
     padding: 0 9px;
-
     border-radius: 6px;
-
     background: #f5f5f5;
     color: #686868;
-
     font-size: 10px;
     font-weight: 600;
 }
 
 
-/* =========================================================
-   LOCATION
-   ========================================================= */
-
+/*LOCATION*/
 .campus-location {
     display: flex;
     flex-direction: column;
@@ -597,10 +495,7 @@
 }
 
 
-/* =========================================================
-   ALUMNI COUNT
-   ========================================================= */
-
+/*ALUMNI COUNT*/
 .campus-alumni-count {
     font-size: 13px;
     font-weight: 700;
@@ -608,15 +503,11 @@
 }
 
 
-/* =========================================================
-   STATUS
-   ========================================================= */
-
+/*STATUS*/
 .campus-status {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-
     font-size: 10px;
     font-weight: 600;
 }
@@ -624,7 +515,6 @@
 .campus-status i {
     width: 6px;
     height: 6px;
-
     border-radius: 50%;
 }
 
@@ -645,10 +535,7 @@
 }
 
 
-/* =========================================================
-   ACTIONS
-   ========================================================= */
-
+/*ACTIONS*/
 .campus-actions {
     display: flex;
     align-items: center;
@@ -658,21 +545,15 @@
 .campus-action-button {
     width: 30px;
     height: 30px;
-
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     padding: 0;
-
     border: 1px solid #e9e9e9;
     border-radius: 7px;
-
     background: #ffffff;
     color: #858585;
-
     cursor: pointer;
-
     transition:
         color .18s ease,
         background .18s ease,
@@ -702,7 +583,6 @@
 .campus-action-button svg {
     width: 15px;
     height: 15px;
-
     fill: none;
     stroke: currentColor;
     stroke-width: 1.7;
@@ -711,10 +591,7 @@
 }
 
 
-/* =========================================================
-   EMPTY STATE
-   ========================================================= */
-
+/*EMPTY STATE*/
 .campus-empty {
     height: 260px !important;
     text-align: center !important;
@@ -730,15 +607,11 @@
 .campus-empty-icon {
     width: 42px;
     height: 42px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     margin: 0 auto 10px;
-
     border-radius: 10px;
-
     background: #f5f5f5;
     color: #999999;
 }
@@ -746,7 +619,6 @@
 .campus-empty-icon svg {
     width: 19px;
     height: 19px;
-
     fill: none;
     stroke: currentColor;
     stroke-width: 1.7;
@@ -754,34 +626,26 @@
 
 .campus-empty strong {
     display: block;
-
     margin-bottom: 4px;
-
     font-size: 12px;
     color: #555555;
 }
 
 .campus-empty span {
     display: block;
-
     font-size: 11px;
     color: #999999;
 }
 
 
-/* =========================================================
-   TABLE FOOTER
-   ========================================================= */
-
+/*TABLE FOOTER*/
 .campus-table-footer {
     min-height: 58px;
     padding: 10px 22px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 15px;
-
     border-top: 1px solid #eeeeee;
 }
 
@@ -796,10 +660,7 @@
 }
 
 
-/* =========================================================
-   PAGINATION
-   ========================================================= */
-
+/*PAGINATION*/
 .campus-pagination {
     display: flex;
     align-items: center;
@@ -809,25 +670,18 @@
 .campus-pagination button {
     width: 29px;
     height: 29px;
-
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     padding: 0;
-
     border: 1px solid #e6e6e6;
     border-radius: 6px;
-
     background: #ffffff;
     color: #666666;
-
     font-family: inherit;
     font-size: 11px;
     font-weight: 600;
-
     cursor: pointer;
-
     transition:
         background .18s ease,
         color .18s ease,
@@ -851,23 +705,16 @@
 }
 
 
-/* =========================================================
-   MODAL OVERLAY
-   ========================================================= */
-
+/*MODAL OVERLAY*/
 .campus-modal-overlay {
     position: fixed;
     inset: 0;
     z-index: 1000;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     padding: 24px;
-
     background: rgba(20, 20, 20, .48);
-
     animation: campusModalFadeIn .18s ease;
 }
 
@@ -882,23 +729,16 @@
 }
 
 
-/* =========================================================
-   MODAL
-   ========================================================= */
-
+/*MODAL*/
 .campus-modal {
     width: 100%;
     max-width: 570px;
     max-height: calc(100vh - 48px);
-
     overflow-y: auto;
-
     background: #ffffff;
     border-radius: 14px;
-
     box-shadow:
         0 20px 60px rgba(0, 0, 0, .18);
-
     animation: campusModalSlideUp .2s ease;
 }
 
@@ -915,25 +755,19 @@
 }
 
 
-/* =========================================================
-   MODAL HEADER
-   ========================================================= */
-
+/*MODAL HEADER*/
 .campus-modal-header {
     min-height: 70px;
     padding: 17px 20px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-
     border-bottom: 1px solid #eeeeee;
 }
 
 .campus-modal-header h3 {
     margin: 0 0 3px;
-
     font-size: 16px;
     font-weight: 700;
     color: #282828;
@@ -941,7 +775,6 @@
 
 .campus-modal-header p {
     margin: 0;
-
     font-size: 11px;
     color: #929292;
 }
@@ -950,25 +783,18 @@
     width: 31px;
     height: 31px;
     flex: 0 0 31px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     padding: 0;
-
     border: 0;
     border-radius: 7px;
-
     background: #f6f6f6;
     color: #777777;
-
     font-size: 21px;
     font-weight: 300;
     line-height: 1;
-
     cursor: pointer;
-
     transition:
         background .18s ease,
         color .18s ease;
@@ -980,10 +806,7 @@
 }
 
 
-/* =========================================================
-   DETAIL
-   ========================================================= */
-
+/*DETAIL*/
 .campus-detail {
     padding: 20px;
 }
@@ -992,9 +815,7 @@
     display: flex;
     align-items: center;
     gap: 13px;
-
     padding-bottom: 18px;
-
     border-bottom: 1px solid #eeeeee;
 }
 
@@ -1002,13 +823,10 @@
     width: 48px;
     height: 48px;
     flex: 0 0 48px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 11px;
-
     background: #fff0f1;
     color: #d71920;
 }
@@ -1016,7 +834,6 @@
 .campus-detail-avatar svg {
     width: 23px;
     height: 23px;
-
     fill: none;
     stroke: currentColor;
     stroke-width: 1.7;
@@ -1026,7 +843,6 @@
 
 .campus-detail-header h4 {
     margin: 0 0 4px;
-
     font-size: 15px;
     font-weight: 700;
     color: #303030;
@@ -1038,39 +854,30 @@
 }
 
 
-/* =========================================================
-   DETAIL GRID
-   ========================================================= */
-
+/*DETAIL GRID*/
 .campus-detail-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
-
     padding: 18px 0;
 }
 
 .campus-detail-grid > div {
     padding: 12px;
-
     border: 1px solid #eeeeee;
     border-radius: 8px;
-
     background: #fafafa;
 }
 
 .campus-detail-grid span {
     display: block;
-
     margin-bottom: 5px;
-
     font-size: 10px;
     color: #999999;
 }
 
 .campus-detail-grid strong {
     display: block;
-
     font-size: 12px;
     font-weight: 650;
     color: #444444;
@@ -1085,15 +892,11 @@
 }
 
 
-/* =========================================================
-   DETAIL LINKS
-   ========================================================= */
-
+/*DETAIL LINKS*/
 .campus-detail-links {
     display: flex;
     flex-direction: column;
     gap: 10px;
-
     padding-top: 2px;
 }
 
@@ -1101,9 +904,7 @@
     display: flex;
     align-items: center;
     gap: 11px;
-
     padding: 11px;
-
     border: 1px solid #eeeeee;
     border-radius: 9px;
 }
@@ -1112,11 +913,9 @@
     width: 34px;
     height: 34px;
     flex: 0 0 34px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 8px;
 }
 
@@ -1133,7 +932,6 @@
 .campus-detail-link-icon svg {
     width: 17px;
     height: 17px;
-
     fill: none;
     stroke: currentColor;
     stroke-width: 1.7;
@@ -1143,14 +941,12 @@
 
 .campus-detail-link-content {
     min-width: 0;
-
     display: flex;
     flex-direction: column;
 }
 
 .campus-detail-link-content > span {
     margin-bottom: 2px;
-
     font-size: 10px;
     color: #999999;
 }
@@ -1162,22 +958,17 @@
 
 .campus-detail-link {
     max-width: 100%;
-
     display: inline-flex;
     align-items: center;
     gap: 6px;
-
     color: #4b6fc0;
-
     font-size: 11px;
     font-weight: 500;
-
     text-decoration: none;
 }
 
 .campus-detail-link > span {
     overflow: hidden;
-
     text-overflow: ellipsis;
     white-space: nowrap;
 }
@@ -1190,7 +981,6 @@
     width: 12px;
     height: 12px;
     flex: 0 0 12px;
-
     fill: none;
     stroke: currentColor;
     stroke-width: 1.7;
@@ -1199,28 +989,19 @@
 }
 
 
-/* =========================================================
-   MODAL CLOSE BUTTON
-   ========================================================= */
-
+/*MODAL CLOSE BUTTON*/
 .campus-modal-close-button {
     width: 100%;
     height: 38px;
-
     margin-top: 18px;
-
     border: 1px solid #e5e5e5;
     border-radius: 8px;
-
     background: #ffffff;
     color: #555555;
-
     font-family: inherit;
     font-size: 12px;
     font-weight: 600;
-
     cursor: pointer;
-
     transition:
         background .18s ease,
         border-color .18s ease,
@@ -1234,10 +1015,7 @@
 }
 
 
-/* =========================================================
-   FORM
-   ========================================================= */
-
+/*FORM*/
 .campus-form {
     padding: 20px;
 }
@@ -1250,7 +1028,6 @@
 
 .campus-form-grid label {
     min-width: 0;
-
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -1266,20 +1043,14 @@
 .campus-form-grid select {
     width: 100%;
     height: 38px;
-
     padding: 0 11px;
-
     border: 1px solid #dfdfdf;
     border-radius: 7px;
-
     background: #ffffff;
     color: #333333;
-
     font-family: inherit;
     font-size: 11px;
-
     outline: none;
-
     transition:
         border-color .18s ease,
         box-shadow .18s ease;
@@ -1305,42 +1076,31 @@
 
 .campus-form-grid small {
     margin-top: -1px;
-
     font-size: 9px;
     line-height: 1.4;
     color: #999999;
 }
 
 
-/* =========================================================
-   FORM ACTIONS
-   ========================================================= */
-
+/*FORM ACTIONS*/
 .campus-form-actions {
     display: flex;
     justify-content: flex-end;
     gap: 8px;
-
     margin-top: 21px;
     padding-top: 17px;
-
     border-top: 1px solid #eeeeee;
 }
 
 .campus-form-button {
     min-width: 92px;
     height: 37px;
-
     padding: 0 14px;
-
     border-radius: 7px;
-
     font-family: inherit;
     font-size: 11px;
     font-weight: 600;
-
     cursor: pointer;
-
     transition:
         background .18s ease,
         border-color .18s ease,
@@ -1369,10 +1129,7 @@
 }
 
 
-/* =========================================================
-   SCROLLBAR
-   ========================================================= */
-
+/*SCROLLBAR*/
 .campus-modal::-webkit-scrollbar,
 .campus-table-wrapper::-webkit-scrollbar {
     width: 6px;
@@ -1396,12 +1153,8 @@
 }
 
 
-/* =========================================================
-   RESPONSIVE - TABLET
-   ========================================================= */
-
+/*RESPONSIVE - TABLET*/
 @media (max-width: 1100px) {
-
     .campus-stat-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -1422,16 +1175,11 @@
     .campus-filter {
         justify-content: flex-start;
     }
-
 }
 
 
-/* =========================================================
-   RESPONSIVE - MOBILE
-   ========================================================= */
-
+/*RESPONSIVE - MOBILE*/
 @media (max-width: 700px) {
-
     .campus-header {
         align-items: flex-start;
         flex-direction: column;
@@ -1504,16 +1252,11 @@
     .campus-form-full {
         grid-column: auto;
     }
-
 }
 
 
-/* =========================================================
-   RESPONSIVE - SMALL MOBILE
-   ========================================================= */
-
+/*RESPONSIVE - SMALL MOBILE*/
 @media (max-width: 430px) {
-
     .campus-header-left {
         align-items: flex-start;
     }
@@ -1557,5 +1300,4 @@
     .campus-form-button {
         width: 100%;
     }
-
 }

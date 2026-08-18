@@ -1,47 +1,27 @@
-/* =========================================================
-   ALUMNI SETTINGS
-   USER PAGE
-   TRACER ALUMNI - TELKOM SCHOOLS
-   ========================================================= */
-
-
-/* =========================================================
-   RESET
-   ========================================================= */
-
+/*RESET*/
 .alumni-settings-page,
 .alumni-settings-page * {
     box-sizing: border-box;
 }
 
 
-/* =========================================================
-   PAGE
-   ========================================================= */
-
+/*PAGE*/
 .alumni-settings-page {
     width: 100%;
     min-height: 100%;
-
     padding: 32px 36px 48px;
-
     background: #f7f7f8;
     color: #252525;
-
     transition:
         background 0.25s ease,
         color 0.25s ease;
 }
 
 
-/* =========================================================
-   HEADER
-   ========================================================= */
-
+/*HEADER*/
 .settings-page-header {
     width: 100%;
     max-width: 900px;
-
     margin: 0 auto 28px;
 }
 
@@ -51,74 +31,50 @@
 
 .settings-label {
     display: inline-block;
-
     margin-bottom: 7px;
-
     font-size: 12px;
     font-weight: 700;
-
     letter-spacing: 1.2px;
-
     color: #d71920;
-
     text-transform: uppercase;
 }
 
 .settings-page-header h1 {
     margin: 0;
-
     font-size: 30px;
     line-height: 1.2;
-
     font-weight: 700;
-
     color: #252525;
 }
 
 .settings-page-header p {
     margin: 8px 0 0;
-
     font-size: 14px;
     line-height: 1.6;
-
     color: #777;
 }
 
 
-/* =========================================================
-   CONTENT
-   ========================================================= */
-
+/*CONTENT*/
 .settings-content {
     width: 100%;
     max-width: 900px;
-
     margin: 0 auto;
-
     display: flex;
     flex-direction: column;
-
     gap: 18px;
 }
 
 
-/* =========================================================
-   SETTINGS CARD
-   ========================================================= */
-
+/*SETTINGS CARD*/
 .settings-card {
     width: 100%;
-
     background: #ffffff;
-
     border: 1px solid #e9e9e9;
     border-radius: 14px;
-
     box-shadow:
         0 4px 16px rgba(0, 0, 0, 0.035);
-
     overflow: hidden;
-
     transition:
         background 0.25s ease,
         border-color 0.25s ease,
@@ -126,77 +82,53 @@
 }
 
 
-/* =========================================================
-   CARD HEADER
-   ========================================================= */
-
+/*CARD HEADER*/
 .settings-card-header {
     display: flex;
     align-items: center;
-
     gap: 14px;
-
     padding: 24px 28px;
-
     border-bottom: 1px solid #eeeeee;
 }
 
 .settings-card-icon {
     width: 38px;
     height: 38px;
-
     flex: 0 0 38px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 9px;
-
     background: #fff1f2;
-
     color: #d71920;
-
     font-size: 16px;
     font-weight: 700;
 }
 
 .settings-card-header h2 {
     margin: 0 0 4px;
-
     font-size: 16px;
     line-height: 1.3;
-
     font-weight: 700;
-
     color: #252525;
 }
 
 .settings-card-header p {
     margin: 0;
-
     font-size: 12px;
     line-height: 1.5;
-
     color: #888;
 }
 
 
-/* =========================================================
-   SETTINGS OPTION
-   ========================================================= */
-
+/*SETTINGS OPTION*/
 .settings-option {
     min-height: 76px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 20px;
-
     padding: 18px 28px;
-
     border-bottom: 1px solid #eeeeee;
 }
 
@@ -205,97 +137,67 @@
 }
 
 
-/* =========================================================
-   OPTION INFO
-   ========================================================= */
-
+/*OPTION INFO*/
 .settings-option-info {
     min-width: 0;
-
     display: flex;
     flex-direction: column;
-
     gap: 4px;
 }
 
 .settings-option-info strong {
     display: block;
-
     font-size: 13px;
     line-height: 1.4;
-
     font-weight: 700;
-
     color: #333;
 }
 
 .settings-option-info span {
     display: block;
-
     font-size: 12px;
     line-height: 1.5;
-
     color: #888;
 }
 
 
-/* =========================================================
-   SWITCH
-   ========================================================= */
-
+/*SWITCH*/
 .settings-switch {
     position: relative;
-
     width: 44px;
     height: 24px;
-
     flex: 0 0 44px;
-
     display: block;
-
     cursor: pointer;
 }
 
 .settings-switch input {
     position: absolute;
-
     width: 1px;
     height: 1px;
-
     opacity: 0;
 }
 
 .settings-slider {
     position: absolute;
-
     inset: 0;
-
     border-radius: 20px;
-
     background: #d5d5d5;
-
     transition:
         background 0.2s ease;
 }
 
 .settings-slider::before {
     content: "";
-
     position: absolute;
-
     width: 18px;
     height: 18px;
-
     top: 3px;
     left: 3px;
-
     border-radius: 50%;
-
     background: #ffffff;
-
     box-shadow:
         0 1px 4px rgba(0, 0, 0, 0.18);
-
     transition:
         transform 0.2s ease;
 }
@@ -309,55 +211,37 @@
 }
 
 
-/* =========================================================
-   SETTINGS LIST
-   ========================================================= */
-
+/*SETTINGS LIST*/
 .settings-list {
     width: 100%;
 }
 
 
-/* =========================================================
-   PASSWORD FORM
-   ========================================================= */
-
+/*PASSWORD FORM*/
 .settings-password-form {
     display: grid;
-
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
-
     gap: 18px;
-
     padding: 24px 28px 28px;
 }
 
 
-/* =========================================================
-   FORM GROUP
-   ========================================================= */
-
+/*FORM GROUP*/
 .settings-form-group {
     min-width: 0;
 }
 
 .settings-form-group label {
     display: block;
-
     margin-bottom: 7px;
-
     font-size: 12px;
     font-weight: 600;
-
     color: #444;
 }
 
 
-/* =========================================================
-   PASSWORD INPUT
-   ========================================================= */
-
+/*PASSWORD INPUT*/
 .settings-password-input {
     width: 100%;
 }
@@ -365,21 +249,14 @@
 .settings-password-input input {
     width: 100%;
     height: 44px;
-
     padding: 0 13px;
-
     border: 1px solid #dddddd;
     border-radius: 8px;
-
     background: #ffffff;
-
     color: #252525;
-
     font-family: inherit;
     font-size: 13px;
-
     outline: none;
-
     transition:
         border-color 0.2s ease,
         box-shadow 0.2s ease,
@@ -393,86 +270,58 @@
 
 .settings-password-input input:focus {
     border-color: #d71920;
-
     box-shadow:
         0 0 0 3px rgba(215, 25, 32, 0.08);
 }
 
 
-/* =========================================================
-   SHOW PASSWORD
-   ========================================================= */
-
+/*SHOW PASSWORD*/
 .settings-show-password {
     grid-column: 1 / -1;
-
     display: flex;
     align-items: center;
-
     gap: 8px;
-
     margin-top: -4px;
-
     cursor: pointer;
 }
 
 .settings-show-password input {
     width: 15px;
     height: 15px;
-
     margin: 0;
-
     accent-color: #d71920;
-
     cursor: pointer;
 }
 
 .settings-show-password span {
     font-size: 12px;
-
     color: #777;
 }
 
 
-/* =========================================================
-   FORM ACTION
-   ========================================================= */
-
+/*FORM ACTION*/
 .settings-form-actions {
     grid-column: 1 / -1;
-
     display: flex;
     justify-content: flex-end;
-
     padding-top: 2px;
 }
 
 
-/* =========================================================
-   PRIMARY BUTTON
-   ========================================================= */
-
+/*PRIMARY BUTTON*/
 .settings-btn-primary {
     height: 42px;
-
     padding: 0 18px;
-
     border: 1px solid #d71920;
     border-radius: 8px;
-
     background: #d71920;
-
     color: #ffffff;
-
     font-family: inherit;
     font-size: 13px;
     font-weight: 600;
-
     cursor: pointer;
-
     box-shadow:
         0 3px 8px rgba(215, 25, 32, 0.15);
-
     transition:
         background 0.2s ease,
         border-color 0.2s ease,
@@ -483,7 +332,6 @@
 .settings-btn-primary:hover {
     background: #c8171d;
     border-color: #c8171d;
-
     box-shadow:
         0 5px 12px rgba(215, 25, 32, 0.2);
 }
@@ -493,62 +341,41 @@
 }
 
 
-/* =========================================================
-   ACCOUNT
-   ========================================================= */
-
+/*ACCOUNT*/
 .settings-account-card {
     margin-bottom: 0;
 }
 
 .settings-logout-row {
     min-height: 82px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 20px;
-
     padding: 18px 28px;
 }
 
 
-/* =========================================================
-   DANGER ICON
-   ========================================================= */
-
+/*DANGER ICON*/
 .settings-danger-icon {
     background: #fff5f5;
-
     color: #d71920;
 }
 
 
-/* =========================================================
-   LOGOUT BUTTON
-   ========================================================= */
-
+/*LOGOUT BUTTON*/
 .settings-btn-logout {
     height: 38px;
-
     padding: 0 16px;
-
     flex: 0 0 auto;
-
     border: 1px solid #e0e0e0;
     border-radius: 8px;
-
     background: #ffffff;
-
     color: #d71920;
-
     font-family: inherit;
     font-size: 12px;
     font-weight: 600;
-
     cursor: pointer;
-
     transition:
         background 0.2s ease,
         border-color 0.2s ease,
@@ -557,31 +384,18 @@
 
 .settings-btn-logout:hover {
     border-color: #d71920;
-
     background: #fff5f5;
-
     color: #c8171d;
 }
 
 
-/* =========================================================
-   DARK MODE
-   ========================================================= */
-
-/*
-   Class ini ditambahkan ke BODY oleh AlumniSettings.jsx.
-*/
-
-
+/*DARK MODE*/
 body.alumni-dark-mode {
     background: #151515;
 }
 
 
-/* =========================================================
-   DARK MODE - USER MAIN
-   ========================================================= */
-
+/*DARK MODE - USER MAIN*/
 body.alumni-dark-mode .user-layout {
     background: #151515;
 }
@@ -591,21 +405,14 @@ body.alumni-dark-mode .user-main {
 }
 
 
-/* =========================================================
-   DARK MODE - PAGE
-   ========================================================= */
-
+/*DARK MODE - PAGE*/
 body.alumni-dark-mode .alumni-settings-page {
     background: #151515;
-
     color: #eeeeee;
 }
 
 
-/* =========================================================
-   DARK MODE - HEADER
-   ========================================================= */
-
+/*DARK MODE - HEADER*/
 body.alumni-dark-mode .settings-page-header h1 {
     color: #f5f5f5;
 }
@@ -615,15 +422,10 @@ body.alumni-dark-mode .settings-page-header p {
 }
 
 
-/* =========================================================
-   DARK MODE - CARD
-   ========================================================= */
-
+/*DARK MODE - CARD*/
 body.alumni-dark-mode .settings-card {
     background: #202020;
-
     border-color: #333333;
-
     box-shadow:
         0 4px 16px rgba(0, 0, 0, 0.18);
 }
@@ -641,10 +443,7 @@ body.alumni-dark-mode .settings-card-header p {
 }
 
 
-/* =========================================================
-   DARK MODE - OPTION
-   ========================================================= */
-
+/*DARK MODE - OPTION*/
 body.alumni-dark-mode .settings-option {
     border-bottom-color: #333333;
 }
@@ -658,24 +457,16 @@ body.alumni-dark-mode .settings-option-info span {
 }
 
 
-/* =========================================================
-   DARK MODE - SWITCH
-   ========================================================= */
-
+/*DARK MODE - SWITCH*/
 body.alumni-dark-mode .settings-slider {
     background: #555555;
 }
 
 
-/* =========================================================
-   DARK MODE - INPUT
-   ========================================================= */
-
+/*DARK MODE - INPUT*/
 body.alumni-dark-mode .settings-password-input input {
     background: #292929;
-
     border-color: #444444;
-
     color: #eeeeee;
 }
 
@@ -685,61 +476,38 @@ body.alumni-dark-mode .settings-password-input input::placeholder {
 
 body.alumni-dark-mode .settings-password-input input:focus {
     border-color: #d71920;
-
     background: #292929;
 }
 
 
-/* =========================================================
-   DARK MODE - CHECKBOX
-   ========================================================= */
-
+/*DARK MODE - CHECKBOX*/
 body.alumni-dark-mode .settings-show-password span {
     color: #999999;
 }
 
 
-/* =========================================================
-   DARK MODE - LOGOUT
-   ========================================================= */
-
+/*DARK MODE - LOGOUT*/
 body.alumni-dark-mode .settings-btn-logout {
     background: #292929;
-
     border-color: #444444;
-
     color: #ff6b70;
 }
 
 body.alumni-dark-mode .settings-btn-logout:hover {
     background: #351b1d;
-
     border-color: #d71920;
 }
 
 
-/* =========================================================
-   DARK MODE - SIDE EFFECT
-   ========================================================= */
-
-/*
-   Bagian ini membantu elemen UserLayout yang umum
-   ikut berubah ketika dark mode aktif.
-*/
-
+/*DARK MODE - SIDE EFFECT*/
 body.alumni-dark-mode .user-footer {
     background: #151515;
-
     color: #777777;
 }
 
 
-/* =========================================================
-   TABLET
-   ========================================================= */
-
+/*TABLET*/
 @media (max-width: 900px) {
-
     .alumni-settings-page {
         padding: 26px 22px 40px;
     }
@@ -752,25 +520,16 @@ body.alumni-dark-mode .user-footer {
     .settings-form-actions {
         grid-column: auto;
     }
-
 }
 
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
+/*MOBILE*/
 @media (max-width: 640px) {
-
     .alumni-settings-page {
         padding: 20px 14px 32px;
     }
 
-
-    /* ---------------------------------------------------------
-       HEADER
-       --------------------------------------------------------- */
-
+    /*HEADER*/
     .settings-page-header {
         margin-bottom: 22px;
     }
@@ -783,34 +542,22 @@ body.alumni-dark-mode .user-footer {
         font-size: 13px;
     }
 
-
-    /* ---------------------------------------------------------
-       CARD
-       --------------------------------------------------------- */
-
+    /*CARD*/
     .settings-card {
         border-radius: 12px;
     }
 
-
-    /* ---------------------------------------------------------
-       CARD HEADER
-       --------------------------------------------------------- */
-
+    /*CARD HEADER*/
     .settings-card-header {
         padding: 20px 18px;
-
         gap: 11px;
     }
 
     .settings-card-icon {
         width: 34px;
         height: 34px;
-
         flex-basis: 34px;
-
         border-radius: 8px;
-
         font-size: 14px;
     }
 
@@ -822,16 +569,10 @@ body.alumni-dark-mode .user-footer {
         font-size: 11px;
     }
 
-
-    /* ---------------------------------------------------------
-       OPTION
-       --------------------------------------------------------- */
-
+    /*OPTION*/
     .settings-option {
         align-items: flex-start;
-
         padding: 17px 18px;
-
         gap: 15px;
     }
 
@@ -843,22 +584,13 @@ body.alumni-dark-mode .user-footer {
         font-size: 11px;
     }
 
-
-    /* ---------------------------------------------------------
-       PASSWORD
-       --------------------------------------------------------- */
-
+    /*PASSWORD*/
     .settings-password-form {
         padding: 20px 18px 22px;
-
         gap: 17px;
     }
 
-
-    /* ---------------------------------------------------------
-       BUTTON
-       --------------------------------------------------------- */
-
+    /*BUTTON*/
     .settings-form-actions {
         width: 100%;
     }
@@ -867,32 +599,21 @@ body.alumni-dark-mode .user-footer {
         width: 100%;
     }
 
-
-    /* ---------------------------------------------------------
-       LOGOUT
-       --------------------------------------------------------- */
-
+    /*LOGOUT*/
     .settings-logout-row {
         align-items: stretch;
-
         flex-direction: column;
-
         padding: 18px;
     }
 
     .settings-btn-logout {
         width: 100%;
     }
-
 }
 
 
-/* =========================================================
-   VERY SMALL MOBILE
-   ========================================================= */
-
+/*VERY SMALL MOBILE*/
 @media (max-width: 400px) {
-
     .alumni-settings-page {
         padding-left: 10px;
         padding-right: 10px;

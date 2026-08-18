@@ -1,45 +1,25 @@
-/* =========================================================
-   ALUMNI TRACER STUDY
-   USER PAGE
-   TRACER ALUMNI - TELKOM SCHOOLS
-   ========================================================= */
-
-
-/* =========================================================
-   RESET KHUSUS HALAMAN
-   ========================================================= */
-
+/*RESET KHUSUS HALAMAN*/
 .alumni-tracer-page,
 .alumni-tracer-page * {
     box-sizing: border-box;
 }
 
 
-/* =========================================================
-   PAGE
-   ========================================================= */
-
+/*PAGE*/
 .alumni-tracer-page {
     width: 100%;
     min-height: 100%;
-
     padding: 32px 36px 48px;
-
     background: #f7f7f8;
     color: #252525;
 }
 
 
-/* =========================================================
-   HEADER
-   ========================================================= */
-
+/*HEADER*/
 .tracer-header {
     width: 100%;
     max-width: 1180px;
-
     margin: 0 auto 28px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -51,162 +31,94 @@
 
 .tracer-label {
     display: inline-block;
-
     margin-bottom: 7px;
-
     font-size: 12px;
     font-weight: 700;
-
     letter-spacing: 1.2px;
-
     color: #d71920;
-
     text-transform: uppercase;
 }
 
 .tracer-header h1 {
     margin: 0;
-
     font-size: 30px;
     line-height: 1.2;
     font-weight: 700;
-
     color: #252525;
 }
 
 .tracer-header p {
     margin: 8px 0 0;
-
     font-size: 14px;
     line-height: 1.6;
-
     color: #777;
 }
 
 
-/* =========================================================
-   =========================================================
-   TRACER STEP PROGRESS
-   =========================================================
-   ========================================================= */
-
-/*
-   PENTING:
-
-   Semua class progress di bawah menggunakan prefix:
-
-       tracer-step-
-
-   supaya TIDAK bentrok dengan progress bar
-   yang terdapat di AlumniDashboard.
-*/
-
-
+/*TRACER STEP PROGRESS*/
 .tracer-step-progress {
     width: 100%;
     max-width: 1180px;
-
     margin: 0 auto 30px;
-
     position: relative;
-
     display: grid;
-
     grid-template-columns:
         repeat(3, minmax(0, 1fr));
-
     align-items: start;
 }
 
 
-/* =========================================================
-   BASE LINE
-   ========================================================= */
-
+/*BASE LINE*/
 .tracer-step-line {
     position: absolute;
-
     top: 19px;
-
     left: 16.6667%;
     right: 16.6667%;
-
     height: 2px;
-
     background: #dedede;
-
     overflow: hidden;
-
     z-index: 0;
 }
 
 
-/* =========================================================
-   ACTIVE LINE
-   ========================================================= */
-
+/*ACTIVE LINE*/
 .tracer-step-line-active {
     width: 0;
     height: 100%;
-
     background: #d71920;
-
     transition:
         width 0.3s ease;
 }
 
 
-/* =========================================================
-   STEP ITEM
-   ========================================================= */
-
+/*STEP ITEM*/
 .tracer-step-item {
     position: relative;
-
     min-width: 0;
-
     z-index: 2;
-
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
     text-align: center;
 }
 
 
-/* =========================================================
-   STEP NUMBER
-   ========================================================= */
-
+/*STEP NUMBER*/
 .tracer-step-number {
     width: 38px;
     height: 38px;
-
     flex: 0 0 38px;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     border-radius: 50%;
-
     background: #ffffff;
-
     border: 2px solid #dcdcdc;
-
     color: #999999;
-
     font-size: 13px;
     font-weight: 700;
-
     position: relative;
-
     z-index: 3;
-
     transition:
         background 0.25s ease,
         border-color 0.25s ease,
@@ -215,183 +127,117 @@
 }
 
 
-/* =========================================================
-   ACTIVE STEP
-   ========================================================= */
-
+/*ACTIVE STEP*/
 .tracer-step-item.is-active
 .tracer-step-number {
     background: #d71920;
-
     border-color: #d71920;
-
     color: #ffffff;
-
     box-shadow:
         0 4px 10px rgba(215, 25, 32, 0.16);
 }
 
 
-/* =========================================================
-   STEP LABEL
-   ========================================================= */
-
+/*STEP LABEL*/
 .tracer-step-label {
     display: block;
-
     width: 100%;
     max-width: 150px;
-
     margin-top: 10px;
-
     font-size: 12px;
     line-height: 1.4;
-
     font-weight: 600;
-
     color: #999999;
-
     white-space: normal;
 }
 
 
-/* =========================================================
-   ACTIVE LABEL
-   ========================================================= */
-
+/*ACTIVE LABEL*/
 .tracer-step-item.is-active
 .tracer-step-label {
     color: #d71920;
 }
 
 
-/* =========================================================
-   FORM WRAPPER
-   ========================================================= */
-
+/*FORM WRAPPER*/
 .tracer-form {
     width: 100%;
     max-width: 1180px;
-
     margin: 0 auto;
 }
 
 
-/* =========================================================
-   MAIN SECTION
-   ========================================================= */
-
+/*MAIN SECTION*/
 .tracer-section {
     width: 100%;
-
     padding: 30px;
-
     background: #ffffff;
-
     border: 1px solid #e9e9e9;
-
     border-radius: 14px;
-
     box-shadow:
         0 4px 16px rgba(0, 0, 0, 0.035);
 }
 
 
-/* =========================================================
-   SECTION TITLE
-   ========================================================= */
-
+/*SECTION TITLE*/
 .section-title {
     display: flex;
-
     align-items: flex-start;
-
     gap: 14px;
-
     margin-bottom: 28px;
 }
 
 .section-title > span {
     width: 34px;
     height: 34px;
-
     flex: 0 0 34px;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     border-radius: 9px;
-
     background: #fff1f2;
-
     color: #d71920;
-
     font-size: 12px;
     font-weight: 700;
 }
 
 .section-title h2 {
     margin: 1px 0 5px;
-
     font-size: 20px;
     line-height: 1.3;
-
     font-weight: 700;
-
     color: #252525;
 }
 
 .section-title p {
     margin: 0;
-
     font-size: 13px;
     line-height: 1.5;
-
     color: #777;
 }
 
 
-/* =========================================================
-   CHOICE GRID
-   ========================================================= */
-
+/*CHOICE GRID*/
 .choice-grid {
     display: grid;
-
     grid-template-columns:
         repeat(3, minmax(0, 1fr));
-
     gap: 14px;
-
     margin-bottom: 22px;
 }
 
 
-/* =========================================================
-   CHOICE CARD
-   ========================================================= */
-
+/*CHOICE CARD*/
 .choice-card {
     min-height: 100px;
-
     display: flex;
-
     align-items: flex-start;
-
     gap: 12px;
-
     padding: 18px;
-
     border: 1px solid #e3e3e3;
-
     border-radius: 12px;
-
     background: #ffffff;
-
     cursor: pointer;
-
     transition:
         border-color 0.2s ease,
         background 0.2s ease,
@@ -400,100 +246,71 @@
 
 .choice-card:hover {
     border-color: #d71920;
-
     background: #fffafa;
 }
 
 .choice-card.selected {
     border-color: #d71920;
-
     background: #fff7f7;
-
     box-shadow:
         0 3px 10px rgba(215, 25, 32, 0.08);
 }
 
 .choice-card input {
     margin-top: 3px;
-
     width: 16px;
     height: 16px;
-
     accent-color: #d71920;
-
     flex: 0 0 auto;
 }
 
 .choice-card strong {
     display: block;
-
     margin-bottom: 5px;
-
     font-size: 14px;
     line-height: 1.4;
-
     color: #252525;
 }
 
 .choice-card small {
     display: block;
-
     font-size: 12px;
     line-height: 1.5;
-
     color: #777;
 }
 
 
-/* =========================================================
-   CONDITIONAL BOX
-   ========================================================= */
-
+/*CONDITIONAL BOX*/
 .conditional-box {
     width: 100%;
-
     margin-top: 20px;
-
     padding: 22px;
-
     border: 1px solid #eeeeee;
-
     border-radius: 12px;
-
     background: #fafafa;
 }
 
 .conditional-box h3 {
     margin: 0 0 5px;
-
     font-size: 15px;
     font-weight: 700;
-
     color: #252525;
 }
 
 .conditional-description {
     margin: 0 0 20px;
-
     font-size: 12px;
     line-height: 1.5;
-
     color: #777;
 }
 
 
-/* =========================================================
-   CONDITIONAL HEADER
-   ========================================================= */
-
+/*CONDITIONAL HEADER*/
 .conditional-header {
     display: flex;
-
     align-items: center;
     justify-content: space-between;
-
     gap: 20px;
-
     margin-bottom: 20px;
 }
 
@@ -503,73 +320,48 @@
 
 .conditional-header p {
     margin: 0;
-
     font-size: 12px;
     line-height: 1.5;
-
     color: #777;
 }
 
 
-/* =========================================================
-   FORM GRID
-   ========================================================= */
-
+/*FORM GRID*/
 .form-grid {
     display: grid;
-
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
-
     gap: 18px;
 }
 
 
-/* =========================================================
-   FORM GROUP
-   ========================================================= */
-
+/*FORM GROUP */
 .form-group {
     min-width: 0;
 }
 
 .form-group label {
     display: block;
-
     margin-bottom: 7px;
-
     font-size: 12px;
     font-weight: 600;
-
     color: #444;
 }
 
 
-/* =========================================================
-   INPUT & SELECT
-   ========================================================= */
-
+/*INPUT & SELECT*/
 .form-group input,
 .form-group select {
     width: 100%;
     height: 44px;
-
     padding: 0 13px;
-
     border: 1px solid #dddddd;
-
     border-radius: 8px;
-
     background: #ffffff;
-
     color: #252525;
-
     font-family: inherit;
-
     font-size: 13px;
-
     outline: none;
-
     transition:
         border-color 0.2s ease,
         box-shadow 0.2s ease;
@@ -582,51 +374,32 @@
 .form-group input:focus,
 .form-group select:focus {
     border-color: #d71920;
-
     box-shadow:
         0 0 0 3px rgba(215, 25, 32, 0.08);
 }
 
 
-/* =========================================================
-   CHECKBOX GRID
-   ========================================================= */
-
+/*CHECKBOX GRID*/
 .checkbox-grid {
     display: grid;
-
     grid-template-columns:
         repeat(3, minmax(0, 1fr));
-
     gap: 14px;
-
     margin-bottom: 8px;
 }
 
 
-/* =========================================================
-   CHECKBOX CARD
-   ========================================================= */
-
+/*CHECKBOX CARD*/
 .checkbox-card {
     min-height: 62px;
-
     display: flex;
-
     align-items: center;
-
     gap: 11px;
-
     padding: 15px 17px;
-
     border: 1px solid #e3e3e3;
-
     border-radius: 10px;
-
     background: #ffffff;
-
     cursor: pointer;
-
     transition:
         border-color 0.2s ease,
         background 0.2s ease;
@@ -634,148 +407,100 @@
 
 .checkbox-card:hover {
     border-color: #d71920;
-
     background: #fffafa;
 }
 
 .checkbox-card.checked {
     border-color: #d71920;
-
     background: #fff7f7;
 }
 
 .checkbox-card input {
     width: 17px;
     height: 17px;
-
     margin: 0;
-
     accent-color: #d71920;
-
     flex: 0 0 auto;
 }
 
 .checkbox-card span {
     font-size: 13px;
     font-weight: 600;
-
     color: #333;
 }
 
 
-/* =========================================================
-   STATUS HELPER
-   ========================================================= */
-
+/*STATUS HELPER*/
 .status-helper {
     margin: 7px 0 0;
-
     font-size: 12px;
-
     color: #d71920;
 }
 
 
-/* =========================================================
-   DYNAMIC CARD
-   ========================================================= */
-
+/*DYNAMIC CARD*/
 .dynamic-card {
     width: 100%;
-
     margin-top: 16px;
-
     padding: 20px;
-
     background: #ffffff;
-
     border: 1px solid #e5e5e5;
-
     border-radius: 10px;
 }
 
 .dynamic-card-header {
     display: flex;
-
     align-items: center;
     justify-content: space-between;
-
     gap: 15px;
-
     margin-bottom: 18px;
-
     padding-bottom: 13px;
-
     border-bottom: 1px solid #eeeeee;
 }
 
 .dynamic-card-header h4 {
     margin: 0;
-
     font-size: 13px;
     font-weight: 700;
-
     color: #333;
 }
 
 
-/* =========================================================
-   EMPTY STATE
-   ========================================================= */
-
+/*EMPTY STATE*/
 .empty-state {
     padding: 30px 20px;
-
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
     justify-content: center;
-
     text-align: center;
-
     border: 1px dashed #dcdcdc;
-
     border-radius: 10px;
-
     background: #ffffff;
 }
 
 .empty-state > span {
     margin-bottom: 8px;
-
     font-size: 26px;
 }
 
 .empty-state p {
     margin: 0 0 14px;
-
     font-size: 12px;
-
     color: #888;
 }
 
 .empty-state button {
     height: 36px;
-
     padding: 0 14px;
-
     border: 1px solid #d71920;
-
     border-radius: 7px;
-
     background: #ffffff;
-
     color: #d71920;
-
     font-family: inherit;
-
     font-size: 12px;
     font-weight: 600;
-
     cursor: pointer;
-
     transition:
         background 0.2s ease,
         color 0.2s ease;
@@ -783,37 +508,23 @@
 
 .empty-state button:hover {
     background: #d71920;
-
     color: #ffffff;
 }
 
 
-/* =========================================================
-   BUTTON ADD
-   ========================================================= */
-
+/*BUTTON ADD*/
 .btn-add {
     height: 38px;
-
     padding: 0 14px;
-
     flex: 0 0 auto;
-
     border: 1px solid #d71920;
-
     border-radius: 7px;
-
     background: #ffffff;
-
     color: #d71920;
-
     font-family: inherit;
-
     font-size: 12px;
     font-weight: 600;
-
     cursor: pointer;
-
     transition:
         background 0.2s ease,
         color 0.2s ease;
@@ -821,29 +532,19 @@
 
 .btn-add:hover {
     background: #d71920;
-
     color: #ffffff;
 }
 
 
-/* =========================================================
-   DELETE BUTTON
-   ========================================================= */
-
+/*DELETE BUTTON*/
 .btn-delete {
     border: none;
-
     background: transparent;
-
     padding: 5px 7px;
-
     color: #d71920;
-
     font-family: inherit;
-
     font-size: 11px;
     font-weight: 600;
-
     cursor: pointer;
 }
 
@@ -852,32 +553,21 @@
 }
 
 
-/* =========================================================
-   RATING
-   ========================================================= */
-
+/*RATING*/
 .rating-list {
     width: 100%;
-
     display: flex;
-
     flex-direction: column;
-
     border-top: 1px solid #eeeeee;
 }
 
 .rating-row {
     min-height: 86px;
-
     display: flex;
-
     align-items: center;
     justify-content: space-between;
-
     gap: 25px;
-
     padding: 18px 0;
-
     border-bottom: 1px solid #eeeeee;
 }
 
@@ -887,58 +577,39 @@
 
 .rating-row strong {
     display: block;
-
     margin-bottom: 5px;
-
     font-size: 13px;
     font-weight: 700;
-
     color: #333;
 }
 
 .rating-row span {
     display: block;
-
     font-size: 12px;
     line-height: 1.5;
-
     color: #888;
 }
 
 
-/* =========================================================
-   RATING OPTIONS
-   ========================================================= */
-
+/*RATING OPTIONS*/
 .rating-options {
     display: flex;
-
     align-items: center;
-
     gap: 5px;
-
     flex: 0 0 auto;
 }
 
 .rating-options label {
     width: 30px;
     height: 30px;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     border-radius: 6px;
-
     color: #d5d5d5;
-
     font-size: 22px;
-
     line-height: 1;
-
     cursor: pointer;
-
     transition:
         color 0.15s ease,
         background 0.15s ease,
@@ -947,7 +618,6 @@
 
 .rating-options label:hover {
     color: #f1b400;
-
     background: #fffaf0;
 }
 
@@ -961,75 +631,49 @@
 
 .rating-options input {
     position: absolute;
-
     width: 1px;
     height: 1px;
-
     opacity: 0;
-
     pointer-events: none;
 }
 
 
-/* =========================================================
-   RATING HELPER
-   ========================================================= */
-
+/*RATING HELPER*/
 .rating-helper {
     margin: 15px 0 0;
-
     font-size: 12px;
-
     color: #888;
 }
 
 
-/* =========================================================
-   ACTIONS
-   ========================================================= */
-
+/*ACTIONS*/
 .tracer-actions {
     width: 100%;
-
     margin-top: 20px;
-
     display: flex;
-
     align-items: center;
     justify-content: space-between;
-
     gap: 15px;
 }
 
 .action-right {
     display: flex;
-
     align-items: center;
-
     gap: 10px;
 }
 
 
-/* =========================================================
-   GENERAL BUTTON
-   ========================================================= */
-
+/*GENERAL BUTTON*/
 .btn-draft,
 .btn-secondary,
 .btn-primary {
     height: 42px;
-
     padding: 0 18px;
-
     border-radius: 8px;
-
     font-family: inherit;
-
     font-size: 13px;
     font-weight: 600;
-
     cursor: pointer;
-
     transition:
         background 0.2s ease,
         border-color 0.2s ease,
@@ -1045,75 +689,51 @@
 }
 
 
-/* =========================================================
-   DRAFT
-   ========================================================= */
-
+/*DRAFT*/
 .btn-draft {
     border: 1px solid #dddddd;
-
     background: #ffffff;
-
     color: #666;
 }
 
 .btn-draft:hover {
     border-color: #c9c9c9;
-
     background: #f8f8f8;
 }
 
 
-/* =========================================================
-   SECONDARY
-   ========================================================= */
-
+/*SECONDARY*/
 .btn-secondary {
     border: 1px solid #dddddd;
-
     background: #ffffff;
-
     color: #555;
 }
 
 .btn-secondary:hover {
     border-color: #c7c7c7;
-
     background: #f7f7f7;
 }
 
 
-/* =========================================================
-   PRIMARY
-   ========================================================= */
-
+/*PRIMARY*/
 .btn-primary {
     border: 1px solid #d71920;
-
     background: #d71920;
-
     color: #ffffff;
-
     box-shadow:
         0 3px 8px rgba(215, 25, 32, 0.15);
 }
 
 .btn-primary:hover {
     background: #c8171d;
-
     border-color: #c8171d;
-
     box-shadow:
         0 5px 12px rgba(215, 25, 32, 0.2);
 }
 
 
-/* =========================================================
-   TABLET
-   ========================================================= */
-
+/*TABLET*/
 @media (max-width: 900px) {
-
     .alumni-tracer-page {
         padding: 26px 22px 40px;
     }
@@ -1142,19 +762,14 @@
 }
 
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
+/*MOBILE*/
 @media (max-width: 640px) {
-
     .alumni-tracer-page {
         padding: 20px 14px 32px;
     }
 
 
     /* HEADER */
-
     .tracer-header {
         margin-bottom: 22px;
     }
@@ -1168,17 +783,13 @@
     }
 
 
-    /* =====================================================
-       MOBILE STEP PROGRESS
-       ===================================================== */
-
+    /*MOBILE STEP PROGRESS*/
     .tracer-step-progress {
         margin-bottom: 24px;
     }
 
     .tracer-step-line {
         top: 17px;
-
         left: 16.6667%;
         right: 16.6667%;
     }
@@ -1186,41 +797,31 @@
     .tracer-step-number {
         width: 34px;
         height: 34px;
-
         flex-basis: 34px;
-
         font-size: 11px;
     }
 
     .tracer-step-label {
         max-width: 90px;
-
         margin-top: 8px;
-
         font-size: 10px;
     }
 
-
     /* SECTION */
-
     .tracer-section {
         padding: 20px 16px;
-
         border-radius: 12px;
     }
 
     .section-title {
         gap: 10px;
-
         margin-bottom: 22px;
     }
 
     .section-title > span {
         width: 30px;
         height: 30px;
-
         flex-basis: 30px;
-
         border-radius: 8px;
     }
 
@@ -1234,7 +835,6 @@
 
 
     /* CONDITIONAL */
-
     .conditional-box {
         padding: 17px;
     }
@@ -1245,27 +845,21 @@
 
 
     /* RATING */
-
     .rating-row {
         align-items: flex-start;
-
         flex-direction: column;
-
         gap: 12px;
     }
 
     .rating-options {
         width: 100%;
-
         justify-content: flex-start;
     }
 
 
     /* ACTION */
-
     .tracer-actions {
         align-items: stretch;
-
         flex-direction: column-reverse;
     }
 
@@ -1283,12 +877,8 @@
 }
 
 
-/* =========================================================
-   VERY SMALL MOBILE
-   ========================================================= */
-
+/*VERY SMALL MOBILE*/
 @media (max-width: 400px) {
-
     .alumni-tracer-page {
         padding-left: 10px;
         padding-right: 10px;
@@ -1305,7 +895,6 @@
     .tracer-step-number {
         width: 32px;
         height: 32px;
-
         flex-basis: 32px;
     }
 

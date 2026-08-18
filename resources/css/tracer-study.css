@@ -1,43 +1,26 @@
-/* =========================================================
-   TRACER STUDY PAGE
-   TRACER ALUMNI - TELKOM SCHOOLS
-   ========================================================= */
-
-
-/* =========================================================
-   RESET KHUSUS TRACER
-   ========================================================= */
-
+/*RESET KHUSUS TRACER*/
 .tracer-page,
 .tracer-page * {
     box-sizing: border-box;
 }
 
 
-/* =========================================================
-   PAGE
-   ========================================================= */
-
+/*PAGE*/
 .tracer-page {
     width: 100%;
     min-height: 100%;
     padding: 28px 30px 40px;
-
     color: #252525;
     background: #f7f8fa;
 }
 
 
-/* =========================================================
-   PAGE HEADER
-   ========================================================= */
-
+/*PAGE HEADER*/
 .tracer-page-header {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     gap: 24px;
-
     margin-bottom: 24px;
 }
 
@@ -48,14 +31,10 @@
 .tracer-page-badge {
     display: inline-flex;
     align-items: center;
-
     padding: 6px 11px;
-
     border-radius: 6px;
-
     background: #fff0f1;
     color: #d71920;
-
     font-size: 10px;
     font-weight: 800;
     letter-spacing: 0.8px;
@@ -64,9 +43,7 @@
 
 .tracer-page-header h2 {
     margin: 9px 0 5px;
-
     color: #202124;
-
     font-size: 24px;
     font-weight: 750;
     line-height: 1.25;
@@ -74,39 +51,28 @@
 
 .tracer-page-header p {
     margin: 0;
-
     color: #7b8089;
-
     font-size: 13px;
     line-height: 1.5;
 }
 
 
-/* =========================================================
-   EXPORT BUTTON
-   ========================================================= */
-
+/*EXPORT BUTTON*/
 .tracer-export-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-
     min-height: 38px;
     padding: 0 15px;
-
     border: 1px solid #e1e4e8;
     border-radius: 8px;
-
     background: #ffffff;
     color: #42464d;
-
     font-family: inherit;
     font-size: 12px;
     font-weight: 650;
-
     cursor: pointer;
-
     transition:
         background 0.18s ease,
         border-color 0.18s ease,
@@ -117,7 +83,6 @@
 .tracer-export-button:hover {
     border-color: #d71920;
     color: #d71920;
-
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
 }
 
@@ -126,64 +91,46 @@
 }
 
 
-/* =========================================================
-   MAIN STATISTICS
-   ========================================================= */
-
+/*MAIN STATISTICS*/
 .tracer-stats-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 16px;
-
     margin-bottom: 18px;
 }
 
 .tracer-stat-card {
     position: relative;
-
     min-height: 126px;
     padding: 18px 19px;
-
     border: 1px solid #e8eaed;
     border-radius: 12px;
-
     background: #ffffff;
-
     box-shadow: 0 2px 8px rgba(24, 32, 44, 0.025);
-
     overflow: hidden;
 }
 
 .tracer-stat-card::after {
     content: '';
-
     position: absolute;
     right: -18px;
     bottom: -25px;
-
     width: 75px;
     height: 75px;
-
     border-radius: 50%;
-
     background: #f8f8f8;
-
     opacity: 0.5;
 }
 
 .tracer-stat-icon {
     position: relative;
     z-index: 1;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 38px;
     height: 38px;
-
     margin-bottom: 13px;
-
     border-radius: 9px;
 }
 
@@ -210,13 +157,9 @@
 .tracer-stat-card strong {
     position: relative;
     z-index: 1;
-
     display: block;
-
     margin-bottom: 3px;
-
     color: #24272c;
-
     font-size: 22px;
     font-weight: 750;
     line-height: 1.2;
@@ -225,25 +168,18 @@
 .tracer-stat-card > span {
     position: relative;
     z-index: 1;
-
     display: block;
-
     color: #858991;
-
     font-size: 11px;
     font-weight: 500;
 }
 
 
-/* =========================================================
-   ANALYSIS GRID
-   ========================================================= */
-
+/*ANALYSIS GRID*/
 .tracer-analysis-grid {
     display: grid;
     grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
     gap: 18px;
-
     margin-bottom: 18px;
 }
 
@@ -251,12 +187,9 @@
 .tracer-wide-card,
 .tracer-small-card {
     min-width: 0;
-
     border: 1px solid #e7e9ed;
     border-radius: 12px;
-
     background: #ffffff;
-
     box-shadow: 0 2px 8px rgba(24, 32, 44, 0.025);
 }
 
@@ -265,16 +198,12 @@
 }
 
 
-/* =========================================================
-   CARD HEADER
-   ========================================================= */
-
+/*CARD HEADER*/
 .tracer-card-header {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     gap: 16px;
-
     margin-bottom: 20px;
 }
 
@@ -284,9 +213,7 @@
 
 .tracer-card-header h3 {
     margin: 0 0 5px;
-
     color: #292c31;
-
     font-size: 14px;
     font-weight: 720;
     line-height: 1.35;
@@ -294,9 +221,7 @@
 
 .tracer-card-header p {
     margin: 0;
-
     color: #92969d;
-
     font-size: 10.5px;
     line-height: 1.5;
 }
@@ -305,14 +230,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
     flex-shrink: 0;
-
     width: 32px;
     height: 32px;
-
     border-radius: 8px;
-
     background: #f4f5f7;
     color: #72767d;
 }
@@ -333,10 +254,7 @@
 }
 
 
-/* =========================================================
-   STATUS ALUMNI
-   ========================================================= */
-
+/*STATUS ALUMNI*/
 .tracer-status-list {
     display: flex;
     flex-direction: column;
@@ -348,7 +266,6 @@
     align-items: center;
     justify-content: space-between;
     gap: 12px;
-
     min-height: 20px;
 }
 
@@ -356,16 +273,13 @@
     display: flex;
     align-items: center;
     gap: 8px;
-
     color: #5f6369;
-
     font-size: 11.5px;
     font-weight: 550;
 }
 
 .tracer-status-item strong {
     color: #34373c;
-
     font-size: 11.5px;
     font-weight: 700;
 }
@@ -373,9 +287,7 @@
 .tracer-dot {
     width: 7px;
     height: 7px;
-
     border-radius: 50%;
-
     flex-shrink: 0;
 }
 
@@ -398,21 +310,15 @@
 .tracer-progress {
     width: 100%;
     height: 6px;
-
     margin-bottom: 7px;
-
     border-radius: 999px;
-
     background: #f0f1f3;
-
     overflow: hidden;
 }
 
 .tracer-progress span {
     display: block;
-
     height: 100%;
-
     border-radius: inherit;
 }
 
@@ -453,10 +359,7 @@
 }
 
 
-/* =========================================================
-   MASA TUNGGU
-   ========================================================= */
-
+/*MASA TUNGGU*/
 .tracer-waiting-list {
     display: flex;
     flex-direction: column;
@@ -467,9 +370,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     min-height: 45px;
-
     border-bottom: 1px solid #f0f1f3;
 }
 
@@ -489,21 +390,16 @@
 
 .tracer-waiting-item strong {
     color: #34373c;
-
     font-size: 12px;
     font-weight: 750;
 }
 
 
-/* =========================================================
-   SECONDARY GRID
-   ========================================================= */
-
+/*SECONDARY GRID*/
 .tracer-secondary-grid {
     display: grid;
     grid-template-columns: minmax(0, 1.6fr) minmax(260px, 0.65fr);
     gap: 18px;
-
     margin-bottom: 18px;
 }
 
@@ -516,10 +412,7 @@
 }
 
 
-/* =========================================================
-   COMPATIBILITY
-   ========================================================= */
-
+/*COMPATIBILITY*/
 .tracer-compatibility {
     display: flex;
     flex-direction: column;
@@ -530,40 +423,31 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     margin-bottom: 7px;
 }
 
 .tracer-compatibility-item span {
     color: #60646b;
-
     font-size: 11.5px;
 }
 
 .tracer-compatibility-item strong {
     color: #34373c;
-
     font-size: 11.5px;
     font-weight: 750;
 }
 
 .tracer-progress.large {
     height: 7px;
-
     margin-bottom: 0;
 }
 
 
-/* =========================================================
-   EDUCATION CARD
-   ========================================================= */
-
+/*EDUCATION CARD*/
 .tracer-education-number {
     margin-top: 4px;
     margin-bottom: 2px;
-
     color: #7657c8;
-
     font-size: 30px;
     font-weight: 780;
     line-height: 1.1;
@@ -571,11 +455,8 @@
 
 .tracer-education-label {
     display: block;
-
     margin-bottom: 18px;
-
     color: #8a8e95;
-
     font-size: 10.5px;
     line-height: 1.45;
 }
@@ -588,55 +469,40 @@
 
 .tracer-education-info > div {
     padding: 10px;
-
     border: 1px solid #eceef1;
     border-radius: 8px;
-
     background: #fafbfc;
 }
 
 .tracer-education-info span {
     display: block;
-
     margin-bottom: 5px;
-
     color: #969aa1;
-
     font-size: 9.5px;
 }
 
 .tracer-education-info strong {
     color: #42464c;
-
     font-size: 13px;
     font-weight: 750;
 }
 
 
-/* =========================================================
-   SATISFACTION
-   ========================================================= */
-
+/*SATISFACTION*/
 .tracer-satisfaction-card {
     display: grid;
     grid-template-columns: minmax(250px, 0.75fr) minmax(0, 1.25fr);
     gap: 0;
-
     margin-bottom: 18px;
-
     border: 1px solid #e7e9ed;
     border-radius: 12px;
-
     background: #ffffff;
-
     box-shadow: 0 2px 8px rgba(24, 32, 44, 0.025);
-
     overflow: hidden;
 }
 
 .tracer-satisfaction-main {
     padding: 20px;
-
     border-right: 1px solid #eceef1;
 }
 
@@ -652,7 +518,6 @@
 
 .tracer-satisfaction-rating > strong {
     color: #272a2f;
-
     font-size: 42px;
     font-weight: 780;
     line-height: 1;
@@ -666,7 +531,6 @@
 
 .tracer-big-stars {
     color: #f0b429;
-
     font-size: 17px;
     letter-spacing: 2px;
     line-height: 1;
@@ -674,16 +538,13 @@
 
 .tracer-satisfaction-rating span {
     color: #989ca3;
-
     font-size: 10px;
 }
 
 .tracer-satisfaction-items {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-
     padding: 20px;
-
     gap: 0 24px;
 }
 
@@ -692,9 +553,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 15px;
-
     min-height: 48px;
-
     border-bottom: 1px solid #f0f1f3;
 }
 
@@ -704,32 +563,23 @@
 
 .tracer-satisfaction-items span {
     color: #686c73;
-
     font-size: 10.5px;
 }
 
 .tracer-satisfaction-items strong {
     flex-shrink: 0;
-
     color: #373a40;
-
     font-size: 11px;
     font-weight: 750;
 }
 
 
-/* =========================================================
-   RESPONDENT CARD
-   ========================================================= */
-
+/*RESPONDENT CARD*/
 .tracer-respondent-card {
     border: 1px solid #e7e9ed;
     border-radius: 12px;
-
     background: #ffffff;
-
     box-shadow: 0 2px 8px rgba(24, 32, 44, 0.025);
-
     overflow: hidden;
 }
 
@@ -739,50 +589,38 @@
 
 .tracer-respondent-header h3 {
     margin: 0 0 5px;
-
     color: #292c31;
-
     font-size: 14px;
     font-weight: 720;
 }
 
 .tracer-respondent-header p {
     margin: 0;
-
     color: #92969d;
-
     font-size: 10.5px;
 }
 
 
-/* =========================================================
-   FILTER AREA
-   ========================================================= */
-
+/*FILTER AREA*/
 .tracer-filter-area {
     display: grid;
     grid-template-columns: minmax(230px, 1fr) 130px 145px 145px auto;
     align-items: center;
     gap: 8px;
-
     padding: 0 20px 17px;
 }
 
 .tracer-search {
     position: relative;
-
     display: flex;
     align-items: center;
-
     min-width: 0;
 }
 
 .tracer-search svg {
     position: absolute;
     left: 11px;
-
     color: #9da1a7;
-
     pointer-events: none;
 }
 
@@ -790,18 +628,13 @@
 .tracer-filter-select {
     width: 100%;
     height: 36px;
-
     border: 1px solid #e1e4e8;
     border-radius: 7px;
-
     background: #ffffff;
     color: #4d5157;
-
     font-family: inherit;
     font-size: 10.5px;
-
     outline: none;
-
     transition:
         border-color 0.18s ease,
         box-shadow 0.18s ease;
@@ -818,32 +651,25 @@
 .tracer-search input:focus,
 .tracer-filter-select:focus {
     border-color: #d71920;
-
     box-shadow: 0 0 0 3px rgba(215, 25, 32, 0.07);
 }
 
 .tracer-filter-select {
     padding: 0 10px;
-
     cursor: pointer;
 }
 
 .tracer-reset-button {
     height: 36px;
     padding: 0 13px;
-
     border: 1px solid #e1e4e8;
     border-radius: 7px;
-
     background: #ffffff;
     color: #777b82;
-
     font-family: inherit;
     font-size: 10.5px;
     font-weight: 650;
-
     cursor: pointer;
-
     transition:
         border-color 0.18s ease,
         background 0.18s ease,
@@ -857,15 +683,10 @@
 }
 
 
-/* =========================================================
-   TABLE
-   ========================================================= */
-
+/*TABLE*/
 .tracer-table-wrapper {
     width: 100%;
-
     overflow-x: auto;
-
     border-top: 1px solid #eceef1;
     border-bottom: 1px solid #eceef1;
 }
@@ -873,22 +694,16 @@
 .tracer-table {
     width: 100%;
     min-width: 900px;
-
     border-collapse: collapse;
     border-spacing: 0;
-
     table-layout: auto;
 }
 
 .tracer-table th {
     height: 42px;
-
     padding: 0 12px;
-
     background: #fafbfc;
-
     color: #858990;
-
     font-size: 9px;
     font-weight: 750;
     letter-spacing: 0.35px;
@@ -909,15 +724,10 @@
 
 .tracer-table td {
     height: 66px;
-
     padding: 10px 12px;
-
     border-top: 1px solid #f0f1f3;
-
     color: #555960;
-
     font-size: 10.5px;
-
     vertical-align: middle;
 }
 
@@ -930,28 +740,19 @@
 }
 
 
-/* =========================================================
-   TABLE NUMBER
-   ========================================================= */
-
+/*TABLE NUMBER*/
 .tracer-number {
     width: 42px;
-
     color: #9a9ea4 !important;
-
     font-size: 10px !important;
 }
 
 
-/* =========================================================
-   ALUMNI CELL
-   ========================================================= */
-
+/*ALUMNI CELL*/
 .tracer-alumni-cell {
     display: flex;
     align-items: center;
     gap: 10px;
-
     min-width: 170px;
 }
 
@@ -959,17 +760,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 34px;
     height: 34px;
-
     flex-shrink: 0;
-
     border-radius: 9px;
-
     background: #fff0f1;
     color: #d71920;
-
     font-size: 10px;
     font-weight: 800;
 }
@@ -978,75 +774,54 @@
     display: flex;
     flex-direction: column;
     gap: 3px;
-
     min-width: 0;
 }
 
 .tracer-alumni-cell strong {
     color: #373a40;
-
     font-size: 10.5px;
     font-weight: 700;
-
     white-space: nowrap;
 }
 
 .tracer-alumni-cell span {
     color: #9a9ea5;
-
     font-size: 9px;
-
     white-space: nowrap;
 }
 
 
-/* =========================================================
-   YEAR
-   ========================================================= */
+/*YEAR*/
 
 .tracer-year {
     display: inline-flex;
     align-items: center;
-
     padding: 5px 8px;
-
     border-radius: 5px;
-
     background: #f5f6f7;
     color: #64686e;
-
     font-size: 9.5px;
     font-weight: 650;
 }
 
 
-/* =========================================================
-   STATUS
-   ========================================================= */
-
+/*STATUS*/
 .tracer-status {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-
     padding: 5px 8px;
-
     border-radius: 5px;
-
     font-size: 9px;
     font-weight: 650;
-
     white-space: nowrap;
 }
 
 .tracer-status i {
     display: block;
-
     width: 5px;
     height: 5px;
-
     border-radius: 50%;
-
     background: currentColor;
 }
 
@@ -1071,26 +846,19 @@
 }
 
 
-/* =========================================================
-   INFORMATION CELL
-   ========================================================= */
-
+/*INFORMATION CELL*/
 .tracer-information {
     display: flex;
     flex-direction: column;
     gap: 3px;
-
     max-width: 210px;
 }
 
 .tracer-information strong {
     display: block;
-
     color: #4a4e54;
-
     font-size: 10px;
     font-weight: 650;
-
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -1098,44 +866,31 @@
 
 .tracer-information span {
     display: block;
-
     color: #9a9ea5;
-
     font-size: 9px;
-
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
 
-/* =========================================================
-   RESPONSE
-   ========================================================= */
-
+/*RESPONSE*/
 .tracer-response {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-
     padding: 5px 8px;
-
     border-radius: 5px;
-
     font-size: 9px;
     font-weight: 650;
-
     white-space: nowrap;
 }
 
 .tracer-response i {
     display: block;
-
     width: 5px;
     height: 5px;
-
     border-radius: 50%;
-
     background: currentColor;
 }
 
@@ -1150,33 +905,23 @@
 }
 
 
-/* =========================================================
-   DETAIL BUTTON
-   ========================================================= */
-
+/*DETAIL BUTTON*/
 .tracer-detail-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
-
     height: 30px;
     padding: 0 9px;
-
     border: 1px solid #e3e5e8;
     border-radius: 6px;
-
     background: #ffffff;
     color: #666a71;
-
     font-family: inherit;
     font-size: 9.5px;
     font-weight: 650;
-
     cursor: pointer;
-
     white-space: nowrap;
-
     transition:
         border-color 0.18s ease,
         color 0.18s ease,
@@ -1190,13 +935,9 @@
 }
 
 
-/* =========================================================
-   EMPTY TABLE
-   ========================================================= */
-
+/*EMPTY TABLE*/
 .tracer-empty-row {
     height: 220px !important;
-
     text-align: center;
 }
 
@@ -1206,7 +947,6 @@
     align-items: center;
     justify-content: center;
     gap: 7px;
-
     color: #b0b4ba;
 }
 
@@ -1216,41 +956,32 @@
 
 .tracer-empty-row strong {
     color: #6e7278;
-
     font-size: 11px;
 }
 
 .tracer-empty-row span {
     color: #a0a4aa;
-
     font-size: 9.5px;
 }
 
 
-/* =========================================================
-   PAGINATION
-   ========================================================= */
-
+/*PAGINATION*/
 .tracer-pagination {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-
     min-height: 62px;
-
     padding: 0 20px;
 }
 
 .tracer-pagination > span {
     color: #92969d;
-
     font-size: 9.5px;
 }
 
 .tracer-pagination > span strong {
     color: #5c6066;
-
     font-weight: 700;
 }
 
@@ -1264,24 +995,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 28px;
     height: 28px;
-
     padding: 0;
-
     border: 1px solid #e3e5e8;
     border-radius: 6px;
-
     background: #ffffff;
     color: #74787e;
-
     font-family: inherit;
     font-size: 10px;
     font-weight: 650;
-
     cursor: pointer;
-
     transition:
         border-color 0.18s ease,
         background 0.18s ease,
@@ -1301,31 +1025,21 @@
 
 .tracer-pagination-buttons button:disabled {
     opacity: 0.4;
-
     cursor: not-allowed;
 }
 
 
-/* =========================================================
-   MODAL OVERLAY
-   ========================================================= */
-
+/*MODAL OVERLAY*/
 .tracer-modal-overlay {
     position: fixed;
     z-index: 9999;
-
     inset: 0;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     padding: 24px;
-
     background: rgba(22, 25, 30, 0.52);
-
     backdrop-filter: blur(3px);
-
     animation: tracerOverlayIn 0.18s ease;
 }
 
@@ -1340,28 +1054,19 @@
 }
 
 
-/* =========================================================
-   DETAIL MODAL
-   ========================================================= */
-
+/*DETAIL MODAL*/
 .tracer-detail-modal {
     display: flex;
     flex-direction: column;
-
     width: min(900px, 100%);
     max-height: min(90vh, 820px);
-
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 15px;
-
     background: #ffffff;
-
     box-shadow:
         0 24px 70px rgba(0, 0, 0, 0.2),
         0 4px 18px rgba(0, 0, 0, 0.08);
-
     overflow: hidden;
-
     animation: tracerModalIn 0.2s ease;
 }
 
@@ -1378,20 +1083,14 @@
 }
 
 
-/* =========================================================
-   MODAL HEADER
-   ========================================================= */
-
+/*MODAL HEADER*/
 .tracer-modal-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-
     padding: 20px 22px;
-
     border-bottom: 1px solid #eceef1;
-
     background: #ffffff;
 }
 
@@ -1399,7 +1098,6 @@
     display: flex;
     align-items: center;
     gap: 13px;
-
     min-width: 0;
 }
 
@@ -1407,17 +1105,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 48px;
     height: 48px;
-
     flex-shrink: 0;
-
     border-radius: 12px;
-
     background: #fff0f1;
     color: #d71920;
-
     font-size: 13px;
     font-weight: 800;
 }
@@ -1428,11 +1121,8 @@
 
 .tracer-modal-profile span {
     display: block;
-
     margin-bottom: 3px;
-
     color: #d71920;
-
     font-size: 8.5px;
     font-weight: 800;
     letter-spacing: 0.65px;
@@ -1440,18 +1130,14 @@
 
 .tracer-modal-profile h3 {
     margin: 0 0 3px;
-
     color: #282b30;
-
     font-size: 17px;
     font-weight: 750;
 }
 
 .tracer-modal-profile p {
     margin: 0;
-
     color: #969aa1;
-
     font-size: 9.5px;
 }
 
@@ -1459,25 +1145,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 32px;
     height: 32px;
-
     flex-shrink: 0;
-
     border: 1px solid #e4e6e9;
     border-radius: 8px;
-
     background: #ffffff;
     color: #73777d;
-
     font-family: inherit;
     font-size: 21px;
     font-weight: 300;
     line-height: 1;
-
     cursor: pointer;
-
     transition:
         border-color 0.18s ease,
         color 0.18s ease,
@@ -1491,43 +1170,29 @@
 }
 
 
-/* =========================================================
-   MODAL STATUS
-   ========================================================= */
-
+/*MODAL STATUS*/
 .tracer-modal-status {
     display: flex;
     align-items: center;
     gap: 10px;
-
     padding: 11px 22px;
-
     border-bottom: 1px solid #f0f1f3;
-
     background: #fafbfc;
 }
 
 .tracer-modal-nisn {
     color: #9599a0;
-
     font-size: 9px;
 }
 
 
-/* =========================================================
-   MODAL CONTENT
-   ========================================================= */
-
+/*MODAL CONTENT*/
 .tracer-modal-content {
     flex: 1;
-
     min-height: 0;
-
     padding: 0 22px;
-
     overflow-y: auto;
     overscroll-behavior: contain;
-
     scrollbar-width: thin;
     scrollbar-color: #d7d9dd transparent;
 }
@@ -1546,13 +1211,9 @@
 }
 
 
-/* =========================================================
-   MODAL SECTION
-   ========================================================= */
-
+/*MODAL SECTION*/
 .tracer-modal-section {
     padding: 21px 0;
-
     border-bottom: 1px solid #eceef1;
 }
 
@@ -1565,24 +1226,19 @@
     align-items: flex-start;
     justify-content: space-between;
     gap: 16px;
-
     margin-bottom: 16px;
 }
 
 .tracer-modal-section-title h4 {
     margin: 0 0 4px;
-
     color: #34373d;
-
     font-size: 12.5px;
     font-weight: 750;
 }
 
 .tracer-modal-section-title p {
     margin: 0;
-
     color: #979ba2;
-
     font-size: 9.5px;
     line-height: 1.45;
 }
@@ -1590,15 +1246,11 @@
 .tracer-section-badge {
     display: inline-flex;
     align-items: center;
-
     padding: 5px 8px;
-
     border-radius: 5px;
-
     font-size: 8px;
     font-weight: 800;
     letter-spacing: 0.35px;
-
     white-space: nowrap;
 }
 
@@ -1625,43 +1277,31 @@
 
 .tracer-detail-grid > div {
     min-width: 0;
-
     padding: 11px 12px;
-
     border: 1px solid #eceef1;
     border-radius: 8px;
-
     background: #fafbfc;
 }
 
 .tracer-detail-grid span {
     display: block;
-
     margin-bottom: 5px;
-
     color: #9a9ea5;
-
     font-size: 8.5px;
     font-weight: 500;
 }
 
 .tracer-detail-grid strong {
     display: block;
-
     color: #474b51;
-
     font-size: 10.5px;
     font-weight: 650;
     line-height: 1.45;
-
     word-break: break-word;
 }
 
 
-/* =========================================================
-   EDUCATION DETAIL
-   ========================================================= */
-
+/*EDUCATION DETAIL*/
 .tracer-education-detail {
     display: flex;
     flex-direction: column;
@@ -1670,10 +1310,8 @@
 
 .tracer-education-level {
     padding: 12px;
-
     border: 1px solid #eceef1;
     border-radius: 9px;
-
     background: #ffffff;
 }
 
@@ -1681,7 +1319,6 @@
     display: flex;
     align-items: center;
     gap: 9px;
-
     margin-bottom: 10px;
 }
 
@@ -1689,40 +1326,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 31px;
     height: 25px;
-
     flex-shrink: 0;
-
     border-radius: 6px;
-
     background: #f2edff;
     color: #7657c8;
-
     font-size: 8.5px;
     font-weight: 800;
 }
 
 .tracer-education-heading strong {
     color: #4a4e54;
-
     font-size: 10.5px;
     font-weight: 700;
 }
 
 
-/* =========================================================
-   SATISFACTION MODAL
-   ========================================================= */
-
+/*SATISFACTION MODAL*/
 .tracer-modal-satisfaction {
     display: flex;
     flex-direction: column;
-
     border: 1px solid #eceef1;
     border-radius: 9px;
-
     overflow: hidden;
 }
 
@@ -1731,9 +1357,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 18px;
-
     padding: 12px;
-
     border-bottom: 1px solid #eceef1;
 }
 
@@ -1741,20 +1365,17 @@
     display: flex;
     flex-direction: column;
     gap: 3px;
-
     min-width: 0;
 }
 
 .tracer-modal-satisfaction-item span {
     color: #555960;
-
     font-size: 10.5px;
     font-weight: 650;
 }
 
 .tracer-modal-satisfaction-item small {
     color: #9a9ea5;
-
     font-size: 8.5px;
     line-height: 1.4;
 }
@@ -1763,35 +1384,29 @@
     display: inline-flex;
     align-items: center;
     gap: 5px;
-
     flex-shrink: 0;
 }
 
 .tracer-stars {
     color: #f0b429;
-
     font-size: 11px;
     letter-spacing: 0.5px;
 }
 
 .tracer-rating strong {
     color: #42464c;
-
     font-size: 10px;
     font-weight: 750;
 }
 
 .tracer-rating > span:last-child {
     color: #a0a4aa;
-
     font-size: 9px;
 }
 
 .tracer-rating-empty {
     display: inline-block;
-
     color: #a1a5ab;
-
     font-size: 9px;
     font-style: italic;
 }
@@ -1801,31 +1416,24 @@
     align-items: center;
     justify-content: space-between;
     gap: 15px;
-
     padding: 13px;
-
     background: #fafbfc;
 }
 
 .tracer-modal-satisfaction-total span {
     color: #6c7077;
-
     font-size: 10px;
     font-weight: 600;
 }
 
 .tracer-modal-satisfaction-total strong {
     color: #d71920;
-
     font-size: 12px;
     font-weight: 750;
 }
 
 
-/* =========================================================
-   CONTACT
-   ========================================================= */
-
+/*CONTACT*/
 .tracer-contact-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1836,71 +1444,50 @@
     display: flex;
     align-items: center;
     gap: 9px;
-
     min-width: 0;
-
     padding: 11px 12px;
-
     border: 1px solid #eceef1;
     border-radius: 8px;
-
     background: #fafbfc;
-
     color: #666a71;
 }
 
 .tracer-contact-list svg {
     flex-shrink: 0;
-
     color: #8b8f96;
 }
 
 .tracer-contact-list span {
     min-width: 0;
-
     color: #555960;
-
     font-size: 9.5px;
-
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
 
-/* =========================================================
-   MODAL FOOTER
-   ========================================================= */
-
+/*MODAL FOOTER*/
 .tracer-modal-footer {
     display: flex;
     justify-content: flex-end;
-
     padding: 13px 22px;
-
     border-top: 1px solid #eceef1;
-
     background: #ffffff;
 }
 
 .tracer-close-button {
     min-width: 75px;
     height: 34px;
-
     padding: 0 14px;
-
     border: 1px solid #e1e4e8;
     border-radius: 7px;
-
     background: #ffffff;
     color: #64686f;
-
     font-family: inherit;
     font-size: 10px;
     font-weight: 650;
-
     cursor: pointer;
-
     transition:
         border-color 0.18s ease,
         background 0.18s ease,
@@ -1914,12 +1501,8 @@
 }
 
 
-/* =========================================================
-   RESPONSIVE - LARGE TABLET
-   ========================================================= */
-
+/*RESPONSIVE - LARGE TABLET*/
 @media (max-width: 1180px) {
-
     .tracer-page {
         padding: 24px 22px 35px;
     }
@@ -1947,12 +1530,8 @@
 }
 
 
-/* =========================================================
-   RESPONSIVE - TABLET
-   ========================================================= */
-
+/*RESPONSIVE - TABLET*/
 @media (max-width: 900px) {
-
     .tracer-page-header {
         align-items: stretch;
         flex-direction: column;
@@ -1998,12 +1577,8 @@
 }
 
 
-/* =========================================================
-   RESPONSIVE - MOBILE
-   ========================================================= */
-
+/*RESPONSIVE - MOBILE*/
 @media (max-width: 640px) {
-
     .tracer-page {
         padding: 18px 14px 28px;
     }
@@ -2086,9 +1661,7 @@
     .tracer-pagination {
         align-items: flex-start;
         flex-direction: column;
-
         padding: 13px 16px;
-
         gap: 12px;
     }
 
@@ -2099,14 +1672,12 @@
 
     .tracer-modal-overlay {
         align-items: flex-end;
-
         padding: 0;
     }
 
     .tracer-detail-modal {
         width: 100%;
         max-height: 94vh;
-
         border-radius: 15px 15px 0 0;
     }
 
@@ -2144,12 +1715,8 @@
 }
 
 
-/* =========================================================
-   VERY SMALL MOBILE
-   ========================================================= */
-
+/*VERY SMALL MOBILE*/
 @media (max-width: 420px) {
-
     .tracer-page {
         padding-left: 11px;
         padding-right: 11px;
