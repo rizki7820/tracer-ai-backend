@@ -1,0 +1,8 @@
+.vercel
+vendor
+node_modules
+storage/framework/cache/data/*
+storage/framework/sessions/*
+storage/framework/views/*
+storage/logs/*
+bootstrap/cache/*
