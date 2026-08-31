@@ -20,8 +20,7 @@ class AuthService
 
         $role = RoleEnum::from($data['role']);
 
-
-        unset($data['role']);
+        $data['role'] = $role->value;
 
         $user = $this->userRepository->create($data);
 

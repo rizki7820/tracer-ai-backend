@@ -1,10 +1,32 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const API_BASE = '/api/v1/auth'
 
-export default function Login() {
+export default function Login({ initialMode = 'login' }) {
 
-    const [mode, setMode] = useState('login')
+    const [mode, setMode] = useState(initialMode)
+
+    // ================================
+    // ALREADY LOGGED IN? SKIP THE FORM
+    // ================================
+
+    useEffect(() => {
+
+        const token = localStorage.getItem('tracer_token')
+
+        if (!token) return
+
+        let role = 'alumni'
+
+        try {
+            role = JSON.parse(localStorage.getItem('tracer_user') || '{}').role || 'alumni'
+        } catch (e) {
+            role = 'alumni'
+        }
+
+        window.location.href = role === 'admin' ? '/admin-page' : '/alumni'
+
+    }, [])
 
     const [form, setForm] = useState({
         name: '',
@@ -137,10 +159,13 @@ export default function Login() {
 
 
             // ================================
-            // REDIRECT
+            // REDIRECT (role-based)
             // ================================
 
-            window.location.href = '/'
+            const role = payloadData.user?.role
+
+            window.location.href =
+                role === 'admin' ? '/admin-page' : '/alumni'
 
 
         } catch (err) {

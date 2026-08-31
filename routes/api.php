@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Route;
 use App\Enums\RoleEnum;
 
 Route::prefix('v1')->group(function () {
+
     Route::prefix('auth')->group(function () {
 
         Route::post('/register', [AuthController::class, 'register']);
@@ -35,11 +36,11 @@ Route::prefix('v1')->group(function () {
         });
     });
 
-    });
+    // ================================
+    // ALUMNI: PROFILE & APPLICATIONS
+    // ================================
 
-
-
-    Route::middleware(['auth:sanctum','role:' . \App\Enums\RoleEnum::Alumni->value,])->prefix('alumni')->group(function () {
+    Route::middleware(['auth:sanctum', 'role:' . RoleEnum::Alumni->value,])->prefix('alumni')->group(function () {
 
         Route::post('/profile', [AlumniProfileController::class, 'store']);
 
@@ -80,3 +81,5 @@ Route::prefix('v1')->group(function () {
         Route::apiResource('scholarships', AdminScholarshipController::class);
 
     });
+
+});

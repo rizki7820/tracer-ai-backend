@@ -53,7 +53,7 @@ export default function UserNavbar() {
     // HANDLE LOGOUT
     // =========================================================
 
-    const handleLogout = () => {
+    const handleLogout = async () => {
 
         const confirmed = window.confirm(
             'Apakah Anda yakin ingin logout?'
@@ -63,7 +63,29 @@ export default function UserNavbar() {
             return
         }
 
-        // Untuk sementara arahkan ke halaman login
+        const token = localStorage.getItem('tracer_token')
+
+        try {
+
+            if (token) {
+
+                await fetch('/api/v1/auth/logout', {
+                    method: 'POST',
+                    headers: {
+                        Accept: 'application/json',
+                        Authorization: `Bearer ${token}`,
+                    },
+                })
+
+            }
+
+        } catch (e) {
+            // Tetap lanjut logout di sisi client meskipun request gagal
+        }
+
+        localStorage.removeItem('tracer_token')
+        localStorage.removeItem('tracer_user')
+
         window.location.href = '/login'
     }
 

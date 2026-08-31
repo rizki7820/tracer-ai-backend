@@ -52,7 +52,19 @@ if (rootEl) {
 
     const path = window.location.pathname
 
-    let component = <Login />
+    /* ================================
+       AUTH GUARD
+       Protected pages require a token; bounce
+       unauthenticated visitors back to /login.
+    ================================= */
+
+    const isProtected = path.startsWith('/alumni') || path.startsWith('/admin-page')
+
+    if (isProtected && !localStorage.getItem('tracer_token')) {
+        window.location.href = '/login'
+    }
+
+    let component = <Login initialMode={path === '/register' ? 'register' : 'login'} />
 
     /* USER ADMIN */
     if (path === '/admin-page') {

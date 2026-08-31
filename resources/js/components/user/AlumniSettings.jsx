@@ -255,10 +255,8 @@ export default function AlumniSettings() {
         }
 
 
-        /*
-         * Untuk sementara arahkan ke halaman login.
-         * Nantinya dapat diganti dengan proses logout API.
-         */
+        localStorage.removeItem('tracer_token')
+        localStorage.removeItem('tracer_user')
 
         window.location.href = '/login'
 

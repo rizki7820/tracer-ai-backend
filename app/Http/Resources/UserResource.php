@@ -17,7 +17,7 @@ class UserResource extends JsonResource
 
             'email'=>$this->email,
 
-            'role'=>$this->role,
+            'role'=>$this->getRoleNames()->first() ?? $this->role,
 
             'created_at'=>$this->created_at
 
