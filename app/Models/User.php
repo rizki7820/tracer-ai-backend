@@ -11,6 +11,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
+use App\Models\AlumniProfile;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 #[Fillable(['name', 'email', 'password', 'role'])]
 
@@ -32,4 +34,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function alumniProfile(): HasOne
+    {
+        return $this->hasOne(AlumniProfile::class);
+    }
 }
+

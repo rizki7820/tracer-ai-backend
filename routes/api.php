@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\V1\Auth\AuthController;
+use App\Http\Controllers\Api\V1\Alumni\AlumniProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Enums\RoleEnum;
 
@@ -31,5 +32,18 @@ Route::prefix('auth')->group(function () {
 
     });
 
+
 });
+
+    Route::middleware(['auth:sanctum','role:' . \App\Enums\RoleEnum::Alumni->value,])->prefix('alumni')->group(function () {
+
+        Route::post('/profile', [AlumniProfileController::class, 'store']);
+
+        Route::get('/profile', [AlumniProfileController::class, 'show']);
+
+        Route::put('/profile', [AlumniProfileController::class, 'update']);
+
+        Route::delete('/profile', [AlumniProfileController::class, 'destroy']);
+
+    });
 });
