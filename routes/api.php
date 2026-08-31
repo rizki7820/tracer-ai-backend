@@ -2,6 +2,11 @@
 
 use App\Http\Controllers\Api\V1\Auth\AuthController;
 use App\Http\Controllers\Api\V1\Alumni\AlumniProfileController;
+use App\Http\Controllers\Api\V1\Alumni\ApplicationController;
+use App\Http\Controllers\Api\V1\Public\JobVacancyController;
+use App\Http\Controllers\Api\V1\Public\ScholarshipController;
+use App\Http\Controllers\Api\V1\Admin\JobVacancyController as AdminJobVacancyController;
+use App\Http\Controllers\Api\V1\Admin\ScholarshipController as AdminScholarshipController;
 use Illuminate\Support\Facades\Route;
 use App\Enums\RoleEnum;
 
@@ -43,5 +48,35 @@ Route::prefix('v1')->group(function () {
         Route::put('/profile', [AlumniProfileController::class, 'update']);
 
         Route::delete('/profile', [AlumniProfileController::class, 'destroy']);
+
+        Route::get('/applications', [ApplicationController::class, 'index']);
+
+        Route::post('/applications', [ApplicationController::class, 'store']);
+
+    });
+
+    // ================================
+    // PUBLIC: JOB VACANCIES & SCHOLARSHIPS
+    // ================================
+
+    Route::prefix('jobs')->group(function () {
+        Route::get('/', [JobVacancyController::class, 'index']);
+        Route::get('/{slug}', [JobVacancyController::class, 'show']);
+    });
+
+    Route::prefix('scholarships')->group(function () {
+        Route::get('/', [ScholarshipController::class, 'index']);
+        Route::get('/{slug}', [ScholarshipController::class, 'show']);
+    });
+
+    // ================================
+    // ADMIN: MANAGE JOB VACANCIES & SCHOLARSHIPS
+    // ================================
+
+    Route::middleware(['auth:sanctum', 'role:' . RoleEnum::Admin->value])->prefix('admin')->group(function () {
+
+        Route::apiResource('jobs', AdminJobVacancyController::class)->parameters(['jobs' => 'jobVacancy']);
+
+        Route::apiResource('scholarships', AdminScholarshipController::class);
 
     });

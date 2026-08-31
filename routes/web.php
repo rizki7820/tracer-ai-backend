@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/alumni');
 });
 
 
@@ -21,7 +21,7 @@ Route::get('/', function () {
 */
 
 Route::get('/dashboard-page', function () {
-    return view('dashboard');
+    return redirect('/alumni');
 });
 
 
@@ -53,31 +53,39 @@ Route::prefix('admin-page')->group(function () {
 
     // Placeholder halaman berikutnya
     Route::get('/alumni', function () {
-        return view('admin.dashboard');
+        return view('admin.alumni');
     });
 
 
     Route::get('/tracer-study', function () {
-        return view('admin.dashboard');
+        return view('admin.tracer-study');
     });
 
 
     Route::get('/perusahaan', function () {
-        return view('admin.dashboard');
+        return view('admin.perusahaan');
     });
 
     Route::get('/kampus', function () {
-        return view('admin.dashboard');
+        return view('admin.kampus');
     });
 
 
     Route::get('/laporan', function () {
-        return view('admin.dashboard');
+        return view('admin.reports');
     });
 
 
     Route::get('/notifications', function () {
         return view('admin.dashboard');
+    });
+
+    Route::get('/lowongan', function () {
+        return view('admin.lowongan');
+    });
+
+    Route::get('/beasiswa', function () {
+        return view('admin.beasiswa');
     });
 });
 
@@ -114,14 +122,14 @@ Route::prefix('alumni')->group(function () {
     });
 
     Route::get('/kampus', function () {
-        return view('alumni.dashboard');
+        return view('alumni.alumnikampus');
     });
 
     Route::get('/beasiswa', function () {
-        return view('alumni.dashboard');
+        return view('alumni.alumnibeasiswa');
     });
 
     Route::get('/lowongan', function () {
-        return view('alumni.dashboard');
+        return view('alumni.alumnilowongan');
     });
 });

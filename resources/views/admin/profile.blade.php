@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
 
-```
 <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
@@ -18,7 +17,6 @@
     'resources/css/profile.css',
     'resources/js/profile.jsx'
 ])
-```
 
 </head>
 

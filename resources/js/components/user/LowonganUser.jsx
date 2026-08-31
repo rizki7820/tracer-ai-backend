@@ -1,71 +1,52 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import UserLayout from './UserLayout'
 
 /* =========================================================
-   DATA LOWONGAN
+   API HELPERS
    ========================================================= */
 
-const jobVacancies = [
-    {
-        id: 1,
-        position: 'Frontend Developer',
-        company: 'PT Telkom Indonesia',
-        location: 'Bandung',
-        type: 'Full Time',
-        major: 'RPL',
-        posted: '2 hari lalu',
-        deadline: '30 Agustus 2026',
-        salary: 'Rp5.000.000 - Rp8.000.000',
-        description:
-            'Mengembangkan dan memelihara antarmuka aplikasi web menggunakan teknologi frontend modern.',
-        requirements: [
-            'Lulusan SMK/D3/S1 bidang teknologi informasi atau relevan',
-            'Memahami HTML, CSS, dan JavaScript',
-            'Memahami React menjadi nilai tambah',
-            'Mampu bekerja secara individu maupun dalam tim',
-        ],
-        skills: ['HTML', 'CSS', 'JavaScript', 'React'],
-    },
-    {
-        id: 2,
-        position: 'Junior Web Developer',
-        company: 'PT Astra Digital',
-        location: 'Jakarta',
-        type: 'Full Time',
-        major: 'RPL',
-        posted: '3 hari lalu',
-        deadline: '5 September 2026',
-        salary: 'Rp4.500.000 - Rp7.000.000',
-        description:
-            'Membantu tim developer dalam membangun, mengembangkan, dan melakukan maintenance aplikasi berbasis web.',
-        requirements: [
-            'Memahami dasar pemrograman web',
-            'Menguasai HTML, CSS, dan JavaScript',
-            'Memahami database menjadi nilai tambah',
-            'Memiliki kemampuan problem solving yang baik',
-        ],
-        skills: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
-    },
-    {
-        id: 3,
-        position: 'UI/UX Designer',
-        company: 'PT Kreatif Digital Nusantara',
-        location: 'Yogyakarta',
-        type: 'Full Time',
-        major: 'Multimedia',
-        posted: '4 hari lalu',
-        deadline: '10 September 2026',
-        salary: 'Rp4.000.000 - Rp6.500.000',
-        description:
-            'Merancang pengalaman pengguna dan antarmuka digital untuk berbagai produk aplikasi dan website.',
-        requirements: [
-            'Memahami prinsip UI/UX',
-            'Menguasai Figma',
-            'Memiliki portfolio desain',
-            'Memahami design thinking',
-        ],
-        skills: ['Figma', 'UI Design', 'UX Design', 'Prototype'],
-    },
+const API_BASE = '/api/v1'
+
+function authHeaders() {
+    const token = localStorage.getItem('tracer_token')
+    return token ? { Authorization: `Bearer ${token}` } : {}
+}
+
+function mapJobFromApi(job) {
+    return {
+        id: job.id,
+        slug: job.slug,
+        position: job.position,
+        company: job.company,
+        location: job.location,
+        type: job.type,
+        major: job.major,
+        posted: job.published_at
+            ? new Date(job.published_at).toLocaleDateString('id-ID')
+            : '',
+        deadline: job.deadline
+            ? new Date(job.deadline).toLocaleDateString('id-ID', {
+                  day: 'numeric',
+                  month: 'long',
+                  year: 'numeric',
+              })
+            : '-',
+        salary:
+            job.salary_min && job.salary_max
+                ? `${job.salary_min} - ${job.salary_max}`
+                : job.salary_min || job.salary_max || 'Nego',
+        description: job.description || '',
+        requirements: job.requirements || [],
+        skills: job.skills || [],
+        apply_url: job.apply_url,
+    }
+}
+
+/* =========================================================
+   DATA LOWONGAN (fallback jika API belum terhubung)
+   ========================================================= */
+
+const fallbackJobVacancies = [
     {
         id: 4,
         position: 'Network Technician',
@@ -274,7 +255,81 @@ export default function JobVacancy() {
 
     const [jobPage, setJobPage] = useState(1)
 
+    const [jobVacancies, setJobVacancies] = useState(fallbackJobVacancies)
+    const [loadingJobs, setLoadingJobs] = useState(true)
+    const [applyStatus, setApplyStatus] = useState('')
+
     const itemsPerPage = 6
+
+
+    /* =====================================================
+       FETCH LOWONGAN DARI API
+       ===================================================== */
+
+    useEffect(() => {
+        let isMounted = true
+
+        async function fetchJobs() {
+            try {
+                const res = await fetch(`${API_BASE}/jobs?per_page=100`)
+                const json = await res.json()
+
+                if (isMounted && json?.success && json.data?.data?.length) {
+                    setJobVacancies(json.data.data.map(mapJobFromApi))
+                }
+            } catch (err) {
+                // biarkan fallback data tetap tampil jika API belum tersedia
+                console.warn('Gagal memuat lowongan dari API:', err)
+            } finally {
+                if (isMounted) setLoadingJobs(false)
+            }
+        }
+
+        fetchJobs()
+
+        return () => {
+            isMounted = false
+        }
+    }, [])
+
+
+    /* =====================================================
+       LAMAR PEKERJAAN
+       ===================================================== */
+
+    async function handleApply(job) {
+        const token = localStorage.getItem('tracer_token')
+
+        if (!token) {
+            window.location.href = '/login'
+            return
+        }
+
+        if (job.apply_url) {
+            window.open(job.apply_url, '_blank')
+            return
+        }
+
+        setApplyStatus('loading')
+
+        try {
+            const res = await fetch(`${API_BASE}/alumni/applications`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Accept: 'application/json',
+                    ...authHeaders(),
+                },
+                body: JSON.stringify({ job_vacancy_id: job.id }),
+            })
+
+            const json = await res.json()
+
+            setApplyStatus(res.ok ? 'success' : json.message || 'error')
+        } catch (err) {
+            setApplyStatus('error')
+        }
+    }
 
 
     /* =====================================================
@@ -922,14 +977,16 @@ export default function JobVacancy() {
 
                             <button
                                 type="button"
+                                disabled={applyStatus === 'loading'}
                                 onClick={() =>
-                                    window.open(
-                                        '#',
-                                        '_blank'
-                                    )
+                                    handleApply(selectedJob)
                                 }
                             >
-                                Lamar Sekarang
+                                {applyStatus === 'loading'
+                                    ? 'Mengirim...'
+                                    : applyStatus === 'success'
+                                        ? 'Lamaran Terkirim'
+                                        : 'Lamar Sekarang'}
                             </button>
 
                         </div>

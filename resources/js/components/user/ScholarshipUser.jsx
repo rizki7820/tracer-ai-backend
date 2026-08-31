@@ -1,13 +1,49 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import UserLayout from './UserLayout'
 
 /* =========================================================
-   DATA BEASISWA
+   API HELPERS
    ========================================================= */
 
-const scholarshipData = [
+const API_BASE = '/api/v1'
+
+function mapScholarshipFromApi(s) {
+    return {
+        id: s.id,
+        slug: s.slug,
+        name: s.title,
+        provider: s.provider,
+        type: s.funding_type === 'Penuh' ? 'Beasiswa Pemerintah' : 'Beasiswa Kampus',
+        level: s.level || '-',
+        coverage: s.funding_type || '-',
+        deadline: s.deadline
+            ? new Date(s.deadline).toLocaleDateString('id-ID', {
+                  day: 'numeric',
+                  month: 'long',
+                  year: 'numeric',
+              })
+            : '-',
+        location: s.location || '-',
+        category: s.field || 'Umum',
+        description: s.description || '',
+        requirements: s.requirements || [],
+        website: s.registration_url || '#',
+        status:
+            s.status === 'published' &&
+            (!s.deadline || new Date(s.deadline) >= new Date())
+                ? 'Dibuka'
+                : 'Ditutup',
+    }
+}
+
+/* =========================================================
+   DATA BEASISWA (fallback jika API belum terhubung)
+   ========================================================= */
+
+const fallbackScholarships = [
     {
         id: 1,
+
         name: 'Beasiswa Telkom University',
         provider: 'Telkom University',
         type: 'Beasiswa Kampus',
@@ -279,7 +315,37 @@ export default function ScholarshipUser() {
     const [currentPage, setCurrentPage] =
         useState(1)
 
+    const [scholarshipData, setScholarshipData] = useState(fallbackScholarships)
+
     const itemsPerPage = 6
+
+
+    /* =====================================================
+       FETCH BEASISWA DARI API
+       ===================================================== */
+
+    useEffect(() => {
+        let isMounted = true
+
+        async function fetchScholarships() {
+            try {
+                const res = await fetch(`${API_BASE}/scholarships?per_page=100`)
+                const json = await res.json()
+
+                if (isMounted && json?.success && json.data?.data?.length) {
+                    setScholarshipData(json.data.data.map(mapScholarshipFromApi))
+                }
+            } catch (err) {
+                console.warn('Gagal memuat beasiswa dari API:', err)
+            }
+        }
+
+        fetchScholarships()
+
+        return () => {
+            isMounted = false
+        }
+    }, [])
 
 
     /* =====================================================
@@ -295,7 +361,7 @@ export default function ScholarshipUser() {
                 )
             ),
         ]
-    }, [])
+    }, [scholarshipData])
 
 
     const levelOptions = useMemo(() => {
@@ -307,7 +373,7 @@ export default function ScholarshipUser() {
                 )
             ),
         ]
-    }, [])
+    }, [scholarshipData])
 
 
     const categoryOptions = useMemo(() => {
@@ -319,7 +385,7 @@ export default function ScholarshipUser() {
                 )
             ),
         ]
-    }, [])
+    }, [scholarshipData])
 
 
     const coverageOptions = useMemo(() => {
@@ -331,7 +397,7 @@ export default function ScholarshipUser() {
                 )
             ),
         ]
-    }, [])
+    }, [scholarshipData])
 
 
     /* =====================================================
@@ -398,6 +464,7 @@ export default function ScholarshipUser() {
         )
 
     }, [
+        scholarshipData,
         search,
         typeFilter,
         levelFilter,
@@ -421,7 +488,7 @@ export default function ScholarshipUser() {
                 )
                 .slice(0, 3)
 
-        }, [])
+        }, [scholarshipData])
 
 
     /* =====================================================

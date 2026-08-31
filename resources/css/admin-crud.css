@@ -1,0 +1,325 @@
+/* =========================================================
+   ADMIN CRUD - LOWONGAN & BEASISWA
+   ========================================================= */
+
+.crud-page {
+    padding: 28px;
+}
+
+.crud-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.crud-header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 4px;
+}
+
+.crud-header p {
+    color: #6b7280;
+    margin: 0;
+    font-size: 14px;
+}
+
+.crud-add-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #dc2626;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.crud-add-button:hover {
+    background: #b91c1c;
+}
+
+.crud-filter-bar {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.crud-search-input,
+.crud-select {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    font-size: 14px;
+    background: #fff;
+}
+
+.crud-search-input {
+    flex: 1;
+    min-width: 220px;
+}
+
+.crud-table-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+.crud-table-wrapper {
+    overflow-x: auto;
+}
+
+.crud-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.crud-table thead {
+    background: #f9fafb;
+}
+
+.crud-table th {
+    text-align: left;
+    padding: 14px 16px;
+    color: #6b7280;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.crud-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #f3f4f6;
+    color: #1f2937;
+    vertical-align: top;
+}
+
+.crud-table tr:last-child td {
+    border-bottom: none;
+}
+
+.crud-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.crud-badge.published {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.crud-badge.draft {
+    background: #fef9c3;
+    color: #a16207;
+}
+
+.crud-badge.closed {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.crud-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.crud-icon-button {
+    border: none;
+    background: #f3f4f6;
+    color: #374151;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.crud-icon-button:hover {
+    background: #e5e7eb;
+}
+
+.crud-icon-button.danger:hover {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.crud-empty {
+    text-align: center;
+    padding: 48px 16px;
+    color: #9ca3af;
+}
+
+.crud-loading {
+    text-align: center;
+    padding: 48px 16px;
+    color: #6b7280;
+}
+
+.crud-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+}
+
+.crud-pagination button {
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.crud-pagination button.active {
+    background: #dc2626;
+    color: #fff;
+    border-color: #dc2626;
+}
+
+.crud-pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.crud-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.crud-modal {
+    background: #fff;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 640px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 28px;
+}
+
+.crud-modal h2 {
+    margin: 0 0 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.crud-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.crud-form-grid .full {
+    grid-column: 1 / -1;
+}
+
+.crud-field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+.crud-field input,
+.crud-field select,
+.crud-field textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    font-size: 14px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.crud-field textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.crud-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.crud-btn-secondary {
+    padding: 10px 18px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    color: #374151;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.crud-btn-primary {
+    padding: 10px 18px;
+    border-radius: 10px;
+    border: none;
+    background: #dc2626;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.crud-btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.crud-alert {
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+.crud-alert.error {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.crud-alert.success {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+@media (max-width: 720px) {
+    .crud-form-grid {
+        grid-template-columns: 1fr;
+    }
+}

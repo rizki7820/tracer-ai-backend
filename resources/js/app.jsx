@@ -9,6 +9,7 @@ import '../css/perusahaan.css'
 import '../css/notificationpopup.css'
 import '../css/reports.css'
 import '../css/campus.css'
+import '../css/admin-crud.css'
 
 /* USER ALUMNI */
 import '../css/user.css'
@@ -30,6 +31,8 @@ import Perusahaan from './components/Perusahaan'
 import Notifications from './components/NotificationPopup'
 import Reports from './components/Reports'
 import Campus from './components/Campus'
+import AdminJobs from './components/AdminJobs'
+import AdminScholarships from './components/AdminScholarships'
 
 /* USER ALUMNI */
 import AlumniDashboard from './components/user/AlumniDashboard'
@@ -78,6 +81,14 @@ if (rootEl) {
 
     if (path === '/admin-page/laporan') {
         component = <Reports />
+    }
+
+    if (path === '/admin-page/lowongan') {
+        component = <AdminJobs />
+    }
+
+    if (path === '/admin-page/beasiswa') {
+        component = <AdminScholarships />
     }
 
     /* USER ALUMNI */

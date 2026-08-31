@@ -424,6 +424,73 @@ export default function AdminLayout({
 
                     </button>
 
+                    {/* =================================
+                        LOWONGAN KERJA
+                    ================================== */}
+
+                    <button
+                        type="button"
+                        className={
+                            isActive(
+                                '/admin-page/lowongan'
+                            )
+                                ? 'sidebar-item active'
+                                : 'sidebar-item'
+                        }
+                        onClick={() =>
+                            goTo(
+                                '/admin-page/lowongan'
+                            )
+                        }
+                    >
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path d="M3 7h18v13H3z" />
+                            <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                            <path d="M3 12h18" />
+
+                        </svg>
+
+                        <span>
+                            Lowongan Kerja
+                        </span>
+
+                    </button>
+
+                    {/* =================================
+                        BEASISWA
+                    ================================== */}
+
+                    <button
+                        type="button"
+                        className={
+                            isActive(
+                                '/admin-page/beasiswa'
+                            )
+                                ? 'sidebar-item active'
+                                : 'sidebar-item'
+                        }
+                        onClick={() =>
+                            goTo(
+                                '/admin-page/beasiswa'
+                            )
+                        }
+                    >
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path d="M22 10L12 5 2 10l10 5 10-5z" />
+                            <path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5" />
+
+                        </svg>
+
+                        <span>
+                            Beasiswa
+                        </span>
+
+                    </button>
+
 
                     {/* =================================
                         MANAGEMENT

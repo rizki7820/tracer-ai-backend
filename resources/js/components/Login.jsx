@@ -64,6 +64,7 @@ export default function Login() {
                         password: String(form.password || '').trim(),
                         password_confirmation:
                             String(form.password || '').trim(),
+                        role: 'alumni',
                     }
 
 
@@ -99,15 +100,17 @@ export default function Login() {
             // SAVE AUTH DATA
             // ================================
 
+            const payloadData = data.data || {}
+
             localStorage.setItem(
                 'tracer_token',
-                data.token
+                payloadData.token
             )
 
 
             localStorage.setItem(
                 'tracer_user',
-                JSON.stringify(data.user || {})
+                JSON.stringify(payloadData.user || {})
             )
 
 
