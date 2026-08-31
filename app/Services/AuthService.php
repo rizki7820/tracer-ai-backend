@@ -12,8 +12,7 @@ class AuthService
 {
     public function __construct(
         protected UserRepositoryInterface $userRepository
-    ) {
-    }
+    ) {}
 
     public function register(array $data)
     {
@@ -31,14 +30,14 @@ class AuthService
         $token = $user->createToken('auth_token')->plainTextToken;
 
         return [
-            'user'=>new UserResource($user),
+            'user' => new UserResource($user),
             'token' => $token
         ];
     }
 
     public function login(array $data)
     {
-        $user = $this->userRepository->findByEmail($data['email']);
+        $user = $this->userRepository->findByEmail(trim($data['email']));
 
         if (! $user || ! Hash::check($data['password'], $user->password)) {
             throw ValidationException::withMessages([
@@ -49,7 +48,7 @@ class AuthService
         $token = $user->createToken('auth_token')->plainTextToken;
 
         return [
-            'user'=>new UserResource($user),
+            'user' => new UserResource($user),
             'token' => $token
         ];
     }

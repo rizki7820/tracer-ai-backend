@@ -1,0 +1,700 @@
+/*RESET*/
+.alumni-notification-page,
+.alumni-notification-page *,
+.alumni-notification-page *::before,
+.alumni-notification-page *::after {
+    box-sizing: border-box;
+}
+
+/*PAGE*/
+.alumni-notification-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 34px 36px 50px;
+    background: #f7f8fa;
+    color: #252525;
+}
+
+/*HEADER*/
+.notification-page-header {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto 26px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.notification-page-header > div {
+    min-width: 0;
+}
+
+.notification-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #d71920;
+}
+
+
+.notification-page-header h1 {
+    margin: 0;
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 750;
+    color: #252525;
+}
+
+
+.notification-page-header p {
+    margin: 8px 0 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #777777;
+}
+
+/*MARK ALL BUTTON*/
+.notification-mark-all {
+    flex-shrink: 0;
+    min-height: 40px;
+    padding: 0 16px;
+    border: 1px solid #e2e2e2;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #555555;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.notification-mark-all:hover {
+    border-color: #d71920;
+    background: #fff5f5;
+    color: #d71920;
+}
+
+/*SUMMARY*/
+.notification-summary {
+    width: 100%;
+    max-width: 1080px;
+    min-height: 78px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    border: 1px solid #f0d7d9;
+    border-radius: 13px;
+    background: #fff8f8;
+}
+
+.notification-summary-icon {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    background: #ffffff;
+    font-size: 19px;
+}
+
+
+.notification-summary > div:last-child {
+    min-width: 0;
+}
+
+.notification-summary strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #333333;
+}
+
+.notification-summary span {
+    display: block;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #777777;
+}
+
+/*FILTER*/
+.notification-filter {
+    width: 100%;
+    max-width: 1080px;
+    min-height: 52px;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px;
+    border: 1px solid #e5e5e5;
+    border-radius: 11px;
+    background: #ffffff;
+}
+
+.notification-filter button {
+    min-height: 38px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: #777777;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.notification-filter button:hover {
+    color: #d71920;
+}
+
+.notification-filter button.active {
+    background: #fff0f1;
+    color: #d71920;
+}
+
+/*FILTER COUNT*/
+.filter-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 19px;
+    height: 19px;
+    margin-left: 5px;
+    padding: 0 5px;
+    border-radius: 999px;
+    background: #d71920;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/*NOTIFICATION LIST*/
+.notification-list {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+}
+
+/*NOTIFICATION ITEM*/
+.alumni-notification-page .notification-item {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    height: auto !important;
+    min-height: 108px;
+    display: grid !important;
+    grid-template-columns:
+        52px
+        minmax(0, 1fr)
+        34px;
+    align-items: center;
+    column-gap: 16px;
+    padding: 18px 20px !important;
+    margin: 0;
+    border: 1px solid #e6e6e6;
+    border-radius: 14px;
+    background: #ffffff;
+    text-align: left;
+    font-family: inherit;
+    cursor: pointer;
+    overflow: visible;
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.025);
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.alumni-notification-page .notification-item:hover {
+    transform: translateY(-2px);
+    border-color: #dddddd;
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.06);
+}
+
+/*UNREAD*/
+.alumni-notification-page .notification-item.unread {
+    border-color: #efd2d4;
+    background: #fffdfd;
+}
+
+.alumni-notification-page .notification-item.unread:hover {
+    border-color: #e7bfc2;
+    background: #ffffff;
+}
+
+/*NOTIFICATION ICON*/
+.alumni-notification-page .notification-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    border-radius: 13px;
+    font-size: 21px;
+}
+
+.alumni-notification-page .notification-icon.notification-campus {
+    background: #fff0f1;
+}
+
+.alumni-notification-page .notification-icon.notification-job {
+    background: #edf5ff;
+}
+
+.alumni-notification-page .notification-icon.notification-scholarship {
+    background: #fff7e8;
+}
+
+/*NOTIFICATION CONTENT*/
+.alumni-notification-page .notification-content {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
+/*TOP ROW*/
+.alumni-notification-page .notification-top {
+    width: 100%;
+    min-width: 0;
+    min-height: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 6px;
+}
+
+/*TYPE*/
+.alumni-notification-page .notification-type {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    min-height: 22px;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 9px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.alumni-notification-page .notification-type.notification-campus {
+    background: #fff0f1;
+    color: #d71920;
+}
+
+.alumni-notification-page .notification-type.notification-job {
+    background: #edf5ff;
+    color: #3973b8;
+}
+
+.alumni-notification-page .notification-type.notification-scholarship {
+    background: #fff5df;
+    color: #a46b12;
+}
+
+/*UNREAD DOT*/
+.alumni-notification-page .notification-unread-dot {
+    width: 7px;
+    height: 7px;
+    flex: 0 0 7px;
+    border-radius: 50%;
+    background: #d71920;
+}
+
+/*TITLE*/
+.alumni-notification-page .notification-content h3 {
+    width: 100%;
+    margin: 0 0 5px;
+    font-size: 15px;
+    line-height: 1.45;
+    font-weight: 700;
+    color: #292929;
+    overflow-wrap: anywhere;
+}
+
+/*DESCRIPTION*/
+.alumni-notification-page .notification-content > p {
+    width: 100%;
+    margin: 0 0 9px;
+    font-size: 12px;
+    line-height: 1.55;
+    color: #777777;
+    overflow-wrap: anywhere;
+}
+
+/*META*/
+.alumni-notification-page .notification-meta {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px 8px;
+    margin: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    color: #999999;
+}
+
+.alumni-notification-page .notification-meta span {
+    display: inline-flex;
+    align-items: center;
+    min-width: 0;
+}
+
+.alumni-notification-page .notification-meta span:first-child {
+    font-weight: 600;
+    color: #777777;
+}
+
+/*ARROW*/
+.alumni-notification-page .notification-arrow {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    min-height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    border-radius: 50%;
+    background: #f7f7f7;
+    color: #999999;
+    font-size: 16px;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.alumni-notification-page .notification-item:hover .notification-arrow {
+    background: #fff0f1;
+    color: #d71920;
+    transform: translateX(2px);
+}
+
+/*EMPTY STATE*/
+.notification-empty {
+    width: 100%;
+    padding: 70px 25px;
+    border: 1px solid #e6e6e6;
+    border-radius: 14px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.notification-empty-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 17px;
+    border-radius: 50%;
+    background: #f5f5f5;
+    font-size: 24px;
+}
+
+.notification-empty h3 {
+    margin: 0 0 7px;
+    font-size: 17px;
+    line-height: 1.4;
+    color: #333333;
+}
+
+.notification-empty p {
+    max-width: 390px;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #888888;
+}
+
+/*GENERAL*/
+.alumni-notification-page button,
+.alumni-notification-page a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/*TABLET*/
+@media (max-width: 1000px) {
+    .alumni-notification-page {
+        padding: 28px 24px 45px;
+    }
+
+    .notification-page-header,
+    .notification-summary,
+    .notification-filter,
+    .notification-list {
+        max-width: 100%;
+    }
+
+    .alumni-notification-page .notification-item {
+        grid-template-columns:
+            50px
+            minmax(0, 1fr)
+            32px;
+        column-gap: 14px;
+        padding: 17px 18px !important;
+    }
+
+    .alumni-notification-page .notification-icon {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        min-height: 50px;
+    }
+}
+
+
+/*SMALL TABLET*/
+@media (max-width: 760px) {
+    .notification-page-header {
+        align-items: flex-start;
+    }
+
+    .notification-page-header h1 {
+        font-size: 28px;
+    }
+
+    .notification-page-header p {
+        font-size: 13px;
+    }
+
+    .alumni-notification-page .notification-item {
+        grid-template-columns:
+            46px
+            minmax(0, 1fr)
+            30px;
+        column-gap: 13px;
+        min-height: 100px;
+    }
+
+    .alumni-notification-page .notification-icon {
+        width: 46px;
+        height: 46px;
+        min-width: 46px;
+        min-height: 46px;
+        border-radius: 11px;
+        font-size: 19px;
+    }
+
+    .alumni-notification-page .notification-content h3 {
+        font-size: 14px;
+    }
+
+    .alumni-notification-page .notification-content > p {
+        font-size: 11px;
+    }
+}
+
+
+/*MOBILE*/
+@media (max-width: 600px) {
+    .alumni-notification-page {
+        padding: 22px 14px 35px;
+    }
+
+    /*HEADER*/
+    .notification-page-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+        margin-bottom: 20px;
+    }
+
+    .notification-page-header h1 {
+        font-size: 25px;
+    }
+
+    .notification-page-header p {
+        margin-top: 7px;
+        font-size: 12px;
+    }
+
+    .notification-mark-all {
+        width: 100%;
+    }
+
+    /*SUMMARY*/
+    .notification-summary {
+        align-items: flex-start;
+        min-height: auto;
+        padding: 15px;
+    }
+
+    .notification-summary-icon {
+        width: 39px;
+        height: 39px;
+        min-width: 39px;
+        flex-basis: 39px;
+        font-size: 17px;
+    }
+
+    .notification-summary strong {
+        font-size: 12px;
+    }
+
+    .notification-summary span {
+        font-size: 11px;
+    }
+
+    /*FILTER*/
+    .notification-filter {
+        width: 100%;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .notification-filter::-webkit-scrollbar {
+        display: none;
+    }
+
+    .notification-filter button {
+        flex-shrink: 0;
+        padding: 0 12px;
+        font-size: 11px;
+    }
+
+    /*NOTIFICATION CARD*/
+    .alumni-notification-page .notification-item {
+        height: auto !important;
+        min-height: 0;
+        display: grid !important;
+        grid-template-columns:
+            42px
+            minmax(0, 1fr);
+        column-gap: 12px;
+        align-items: start;
+        padding: 15px !important;
+    }
+
+    .alumni-notification-page .notification-icon {
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+        min-height: 42px;
+        border-radius: 10px;
+        font-size: 17px;
+    }
+
+    .alumni-notification-page .notification-content {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .alumni-notification-page .notification-top {
+        min-height: 18px;
+        margin-bottom: 5px;
+        flex-wrap: wrap;
+    }
+
+    .alumni-notification-page .notification-type {
+        min-height: 20px;
+        padding: 4px 7px;
+        font-size: 8px;
+    }
+
+    .alumni-notification-page .notification-content h3 {
+        font-size: 13px;
+        line-height: 1.45;
+    }
+
+    .alumni-notification-page .notification-content > p {
+        margin-bottom: 8px;
+        font-size: 11px;
+        line-height: 1.55;
+    }
+
+    .alumni-notification-page .notification-meta {
+        font-size: 9px;
+    }
+
+    .alumni-notification-page .notification-arrow {
+        display: none;
+    }
+
+    /*EMPTY*/
+    .notification-empty {
+        padding: 55px 20px;
+    }
+}
+
+
+/*VERY SMALL MOBILE*/
+@media (max-width: 400px) {
+    .alumni-notification-page {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+    .alumni-notification-page .notification-item {
+        grid-template-columns:
+            38px
+            minmax(0, 1fr);
+        column-gap: 10px;
+        padding: 13px !important;
+    }
+
+
+    .alumni-notification-page .notification-icon {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        min-height: 38px;
+        font-size: 16px;
+    }
+
+
+    .alumni-notification-page .notification-content h3 {
+        font-size: 12px;
+    }
+
+
+    .alumni-notification-page .notification-content > p {
+        font-size: 10px;
+    }
+
+
+    .alumni-notification-page .notification-meta {
+        font-size: 8px;
+    }
+
+}

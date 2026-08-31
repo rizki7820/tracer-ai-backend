@@ -1,0 +1,893 @@
+/*RESET*/
+.admin-dashboard,
+.admin-dashboard * {
+    box-sizing: border-box;
+}
+
+.admin-dashboard {
+    min-height: 100vh;
+    display: flex;
+    background: #f6f7f9;
+    color: #252525;
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+
+/*SIDEBAR*/
+.admin-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-right: 1px solid #e7e9ee;
+    z-index: 1000;
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+/*SIDEBAR BRAND*/
+.sidebar-brand {
+    height: 82px;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    gap: 12px;
+    border-bottom: 1px solid #eef0f3;
+}
+
+.sidebar-brand img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.sidebar-brand > div {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.sidebar-brand strong {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: #1f2937;
+}
+
+.sidebar-brand span {
+    margin-top: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #8b8f98;
+}
+
+
+/*SIDEBAR MENU*/
+.sidebar-menu {
+    flex: 1;
+    padding: 22px 14px;
+    overflow-y: auto;
+}
+
+.menu-label {
+    margin: 0 12px 10px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: #a0a5ae;
+}
+
+.menu-label-second {
+    margin-top: 28px;
+}
+
+
+/*SIDEBAR ITEM*/
+.sidebar-item {
+    width: 100%;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 0 14px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 9px;
+    background: transparent;
+    color: #606570;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.sidebar-item svg {
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.sidebar-item:hover {
+    background: #f3f4f7;
+    color: #252525;
+}
+
+.sidebar-item.active {
+    background: #eef0ff;
+    color: #665cff;
+    font-weight: 600;
+}
+
+
+/*SIDEBAR FOOTER*/
+.sidebar-footer {
+    padding: 18px 18px;
+    border-top: 1px solid #eef0f3;
+}
+
+.school-info {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.school-logo {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 9px;
+    background: #665cff;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.school-info > div:last-child {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.school-info strong {
+    font-size: 12px;
+    font-weight: 700;
+    color: #353942;
+    white-space: nowrap;
+}
+
+.school-info span {
+    margin-top: 2px;
+    font-size: 10px;
+    color: #9a9ea7;
+}
+
+
+/*MAIN*/
+.admin-main {
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    margin-left: 250px;
+    display: flex;
+    flex-direction: column;
+    background: #f6f7f9;
+    transition:
+        background-color 0.25s ease;
+}
+
+
+/*TOPBAR*/
+.admin-topbar {
+    position: sticky;
+    top: 0;
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #e7e9ee;
+    backdrop-filter: blur(12px);
+    z-index: 900;
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.admin-topbar > div:first-child {
+    min-width: 0;
+}
+
+.admin-topbar h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 750;
+    line-height: 1.25;
+    color: #24262b;
+}
+
+.admin-topbar p {
+    margin: 5px 0 0;
+    font-size: 12px;
+    color: #858a94;
+}
+
+
+/*TOPBAR ACTIONS*/
+.topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/*NOTIFICATION*/
+.notification-button {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 9px;
+    background: transparent;
+    color: #606570;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.notification-button:hover {
+    background: #f3f4f7;
+    color: #252525;
+}
+
+.notification-button svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.notification-dot {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #665cff;
+    border: 2px solid #ffffff;
+}
+
+
+/*PROFILE*/
+.profile-container {
+    position: relative;
+}
+
+.profile-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 7px 5px 5px;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    font-family: inherit;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease;
+}
+
+.profile-button:hover {
+    background: #f3f4f7;
+}
+
+/*PROFILE AVATAR*/
+.profile-avatar {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #665cff;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 750;
+}
+
+
+/*PROFILE INFO*/
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 100px;
+}
+
+.profile-info strong {
+    max-width: 150px;
+    overflow: hidden;
+    font-size: 12px;
+    font-weight: 700;
+    color: #30323a;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.profile-info span {
+    margin-top: 2px;
+    font-size: 10px;
+    color: #91959e;
+}
+
+
+/*PROFILE CHEVRON*/
+.profile-chevron {
+    width: 15px;
+    height: 15px;
+    fill: none;
+    stroke: #858a94;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/*PROFILE DROPDOWN*/
+.profile-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: 255px;
+    padding: 9px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 13px;
+    box-shadow:
+        0 16px 40px rgba(20, 24, 40, 0.12);
+    z-index: 1200;
+    animation: profileDropdownIn 0.16s ease;
+}
+
+@keyframes profileDropdownIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/*DROPDOWN USER*/
+.dropdown-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 7px 11px;
+}
+
+.dropdown-user > div:last-child {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.dropdown-user strong {
+    overflow: hidden;
+    font-size: 12px;
+    font-weight: 700;
+    color: #30323a;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dropdown-user span {
+    margin-top: 3px;
+    overflow: hidden;
+    font-size: 10px;
+    color: #9297a0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/*DROPDOWN DIVIDER*/
+.dropdown-divider {
+    height: 1px;
+    margin: 5px 0;
+    background: #eceef2;
+}
+
+
+/*DROPDOWN ITEM*/
+.dropdown-item {
+    width: 100%;
+    min-height: 39px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 9px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: #4d515a;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background: #f4f5f7;
+    color: #252525;
+}
+
+.dropdown-item svg {
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.dropdown-item.logout {
+    color: #dc4b4b;
+}
+
+.dropdown-item.logout:hover {
+    background: #fff1f1;
+    color: #d93636;
+}
+
+
+/*DARK MODE TOGGLE ROW*/
+.dark-mode-toggle-row {
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 9px;
+}
+
+.dark-mode-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #4d515a;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.dark-mode-label svg {
+    width: 17px;
+    height: 17px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/*THEME SWITCH*/
+.theme-switch {
+    position: relative;
+    width: 38px;
+    height: 21px;
+    padding: 0;
+    border: none;
+    border-radius: 999px;
+    background: #d5d8df;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease;
+}
+
+.theme-switch span {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.2);
+    transition:
+        transform 0.2s ease;
+}
+
+.theme-switch.active {
+    background: #665cff;
+}
+
+.theme-switch.active span {
+    transform: translateX(17px);
+}
+
+
+/*CONTENT*/
+.dashboard-content {
+    flex: 1;
+    width: 100%;
+    padding: 28px 32px 40px;
+}
+
+
+/*DARK MODE*/
+.admin-dashboard.dark-mode {
+    background: #15171c;
+    color: #eeeeef;
+}
+
+.admin-dashboard.dark-mode .admin-sidebar {
+    background: #1b1d23;
+    border-color: #292c33;
+}
+
+.admin-dashboard.dark-mode .sidebar-brand {
+    border-color: #292c33;
+}
+
+.admin-dashboard.dark-mode .sidebar-brand strong {
+    color: #f4f4f5;
+}
+
+.admin-dashboard.dark-mode .sidebar-brand span {
+    color: #8d929c;
+}
+
+.admin-dashboard.dark-mode .sidebar-item {
+    color: #a8adb7;
+}
+
+.admin-dashboard.dark-mode .sidebar-item:hover {
+    background: #252830;
+    color: #ffffff;
+}
+
+.admin-dashboard.dark-mode .sidebar-item.active {
+    background: rgba(102, 92, 255, 0.16);
+    color: #958eff;
+}
+
+.admin-dashboard.dark-mode .sidebar-footer {
+    border-color: #292c33;
+}
+
+.admin-dashboard.dark-mode .school-info strong {
+    color: #eeeeef;
+}
+
+.admin-dashboard.dark-mode .school-info span {
+    color: #858a95;
+}
+
+.admin-dashboard.dark-mode .admin-main {
+    background: #15171c;
+}
+
+.admin-dashboard.dark-mode .admin-topbar {
+    background: rgba(27, 29, 35, 0.96);
+    border-color: #292c33;
+}
+
+.admin-dashboard.dark-mode .admin-topbar h1 {
+    color: #f3f3f4;
+}
+
+.admin-dashboard.dark-mode .admin-topbar p {
+    color: #9297a1;
+}
+
+.admin-dashboard.dark-mode .notification-button {
+    color: #aeb2bb;
+}
+
+.admin-dashboard.dark-mode .notification-button:hover {
+    background: #252830;
+    color: #ffffff;
+}
+
+.admin-dashboard.dark-mode .notification-dot {
+    border-color: #1b1d23;
+}
+
+.admin-dashboard.dark-mode .profile-button:hover {
+    background: #252830;
+}
+
+.admin-dashboard.dark-mode .profile-info strong {
+    color: #eeeeef;
+}
+
+.admin-dashboard.dark-mode .profile-info span {
+    color: #8f949e;
+}
+
+.admin-dashboard.dark-mode .profile-chevron {
+    stroke: #969ba5;
+}
+
+.admin-dashboard.dark-mode .profile-dropdown {
+    background: #1f2229;
+    border-color: #30343d;
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.35);
+}
+
+.admin-dashboard.dark-mode .dropdown-user strong {
+    color: #eeeeef;
+}
+
+.admin-dashboard.dark-mode .dropdown-user span {
+    color: #90959f;
+}
+
+.admin-dashboard.dark-mode .dropdown-divider {
+    background: #30343d;
+}
+
+.admin-dashboard.dark-mode .dropdown-item {
+    color: #b5bac3;
+}
+
+.admin-dashboard.dark-mode .dropdown-item:hover {
+    background: #292c34;
+    color: #ffffff;
+}
+
+.admin-dashboard.dark-mode .dropdown-item.logout {
+    color: #ef7777;
+}
+
+.admin-dashboard.dark-mode .dropdown-item.logout:hover {
+    background: rgba(220, 75, 75, 0.12);
+    color: #ff8888;
+}
+
+.admin-dashboard.dark-mode .dark-mode-label {
+    color: #b5bac3;
+}
+
+
+/*SCROLLBAR*/
+.sidebar-menu::-webkit-scrollbar {
+    width: 5px;
+}
+
+.sidebar-menu::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb {
+    background: #d8dbe1;
+    border-radius: 999px;
+}
+
+.admin-dashboard.dark-mode
+.sidebar-menu::-webkit-scrollbar-thumb {
+    background: #363a43;
+}
+
+
+/*RESPONSIVE*/
+@media (max-width: 1100px) {
+    .admin-sidebar {
+        width: 220px;
+    }
+
+    .admin-main {
+        width: calc(100% - 220px);
+        margin-left: 220px;
+    }
+
+    .admin-topbar {
+        padding: 0 25px;
+    }
+
+    .dashboard-content {
+        padding: 25px;
+    }
+
+    .profile-info {
+        min-width: 85px;
+    }
+}
+
+
+@media (max-width: 850px) {
+    .admin-sidebar {
+        width: 72px;
+    }
+
+    .admin-main {
+        width: calc(100% - 72px);
+        margin-left: 72px;
+    }
+
+    .sidebar-brand {
+        justify-content: center;
+
+        padding: 0;
+    }
+
+    .sidebar-brand img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .sidebar-brand > div {
+        display: none;
+    }
+
+    .sidebar-menu {
+        padding: 20px 10px;
+    }
+
+    .menu-label {
+        display: none;
+    }
+
+    .sidebar-item {
+        justify-content: center;
+
+        padding: 0;
+
+        gap: 0;
+    }
+
+    .sidebar-item span {
+        display: none;
+    }
+
+    .sidebar-footer {
+        padding: 15px 10px;
+    }
+
+    .school-info {
+        justify-content: center;
+    }
+
+    .school-info > div:last-child {
+        display: none;
+    }
+
+    .school-logo {
+        width: 36px;
+        height: 36px;
+    }
+
+    .admin-topbar {
+        padding: 0 20px;
+    }
+
+    .dashboard-content {
+        padding: 22px 20px 35px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .admin-topbar {
+        min-height: 72px;
+
+        padding: 0 15px;
+    }
+
+    .admin-topbar h1 {
+        font-size: 18px;
+    }
+
+    .admin-topbar p {
+        display: none;
+    }
+
+    .topbar-actions {
+        gap: 5px;
+    }
+
+    .profile-info {
+        display: none;
+    }
+
+    .profile-chevron {
+        display: none;
+    }
+
+    .profile-button {
+        padding-right: 3px;
+    }
+
+    .profile-dropdown {
+        position: fixed;
+
+        top: 67px;
+        right: 12px;
+
+        width: min(
+            255px,
+            calc(100vw - 24px)
+        );
+    }
+
+    .dashboard-content {
+        padding: 18px 15px 30px;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .admin-sidebar {
+        width: 62px;
+    }
+
+    .admin-main {
+        width: calc(100% - 62px);
+        margin-left: 62px;
+    }
+
+    .sidebar-menu {
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+
+    .sidebar-item {
+        min-height: 42px;
+    }
+
+    .admin-topbar {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+.notification-container {
+    position: relative;
+}

@@ -18,10 +18,9 @@ class RolePermissionSeeder extends Seeder
 
         foreach (RoleEnum::cases() as $role) {
 
-                Role::firstOrCreate([
-                    'name' => $role->value
-                ]);
-
+            Role::firstOrCreate([
+                'name' => $role->value
+            ]);
         }
 
         foreach (PermissionEnum::cases() as $permission) {
@@ -29,7 +28,6 @@ class RolePermissionSeeder extends Seeder
             Permission::firstOrCreate([
                 'name' => $permission->value
             ]);
-
         }
 
         $admin = Role::findByName(RoleEnum::Admin->value);

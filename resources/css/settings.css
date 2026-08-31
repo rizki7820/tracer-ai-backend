@@ -1,0 +1,846 @@
+.settings-page {
+    min-height: 100vh;
+}
+
+/*SETTINGS CONTENT*/
+.settings-page .settings-content {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 30px 38px 40px;
+}
+
+
+/*SETTINGS LAYOUT*/
+.settings-page .settings-layout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    gap: 22px;
+    align-items: start;
+}
+
+
+/*SETTINGS NAVIGATION*/
+.settings-page .settings-navigation {
+    width: 100%;
+    padding: 12px;
+    background: #ffffff;
+    border: 1px solid #e7e7e7;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    position: sticky;
+    top: 112px;
+}
+
+
+/*SETTINGS NAV ITEM*/
+.settings-page .settings-nav-item {
+    width: 100%;
+    height: 54px;
+    padding: 0 13px;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    color: #555555;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 650;
+    text-align: left;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.settings-page .settings-nav-item:hover {
+    background: #fff1f1;
+    color: #d71920;
+}
+
+.settings-page .settings-nav-item.active {
+    background: #d71920;
+    color: #ffffff;
+    box-shadow:
+        0 7px 18px rgba(215, 25, 32, 0.16);
+}
+
+
+/*SETTINGS NAV ICON*/
+.settings-page .settings-nav-icon {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f6f6f6;
+    color: #777777;
+}
+
+.settings-page .settings-nav-item.active .settings-nav-icon {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+}
+
+.settings-page .settings-nav-icon svg {
+    width: 19px;
+    height: 19px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/*SETTINGS PANEL*/
+.settings-page .settings-panel {
+    width: 100%;
+    min-width: 0;
+    padding: 30px 32px 28px;
+    background: #ffffff;
+    border: 1px solid #e7e7e7;
+    border-radius: 16px;
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+
+/*PANEL HEADER*/
+.settings-page .settings-panel-header {
+    padding-bottom: 21px;
+    margin-bottom: 27px;
+    border-bottom: 1px solid #ededed;
+}
+
+
+.settings-page .settings-panel-header h3 {
+    margin: 0;
+    color: #222222;
+    font-size: 20px;
+    line-height: 1.35;
+    font-weight: 750;
+}
+
+.settings-page .settings-panel-header p {
+    margin: 7px 0 0;
+    color: #999999;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/*SETTINGS FORM*/
+.settings-page .settings-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/*FORM ROW*/
+.settings-page .form-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+
+/*FORM FIELD*/
+.settings-page .form-field {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.settings-page .form-field label {
+    display: block;
+    margin: 0;
+    color: #333333;
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+
+/*INPUT + SELECT*/
+.settings-page .form-field input,
+.settings-page .form-field select {
+    width: 100%;
+    height: 47px;
+    padding: 0 14px;
+    border: 1px solid #dddddd;
+    border-radius: 9px;
+    outline: none;
+    background: #ffffff;
+    color: #333333;
+    font-family: inherit;
+    font-size: 13px;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.settings-page .form-field input:hover,
+.settings-page .form-field select:hover {
+    border-color: #cccccc;
+}
+
+.settings-page .form-field input:focus,
+.settings-page .form-field select:focus {
+    border-color: #d71920;
+    box-shadow:
+        0 0 0 3px rgba(215, 25, 32, 0.08);
+}
+
+
+/*SELECT*/
+.settings-page .form-field select {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    padding-right: 42px;
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23666666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 16px;
+}
+
+
+/*FORM ACTION*/
+.settings-page .form-actions {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px solid #ededed;
+}
+
+.settings-page .primary-button {
+    min-width: 165px;
+    height: 45px;
+    padding: 0 21px;
+    border: none;
+    border-radius: 9px;
+    background: #d71920;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow:
+        0 7px 18px rgba(215, 25, 32, 0.16);
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.settings-page .primary-button:hover {
+    background: #c91118;
+    transform: translateY(-1px);
+    box-shadow:
+        0 10px 22px rgba(215, 25, 32, 0.20);
+}
+
+
+.settings-page .primary-button:active {
+    transform: translateY(0);
+}
+
+
+/*SETTING OPTION*/
+.settings-page .setting-option {
+    width: 100%;
+    min-height: 78px;
+    padding: 16px 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #e7e7e7;
+    border-radius: 12px;
+    background: #ffffff;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.settings-page .setting-option:hover {
+    border-color: #dddddd;
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.035);
+}
+
+
+/*SETTING OPTION ICON*/
+.settings-page .setting-option-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #fff0f1;
+    color: #d71920;
+}
+
+.settings-page .setting-option-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/*SETTING OPTION CONTENT*/
+.settings-page .setting-option-content {
+    min-width: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.settings-page .setting-option-content strong {
+    color: #333333;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.settings-page .setting-option-content span {
+    color: #999999;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/*THEME TOGGLE*/
+.settings-page .theme-toggle {
+    width: 46px;
+    height: 25px;
+    flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.settings-page .theme-toggle input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.settings-page .theme-slider {
+    position: absolute;
+    inset: 0;
+    border-radius: 30px;
+    background: #d6d6d6;
+    transition:
+        background 0.2s ease;
+}
+
+.settings-page .theme-slider::before {
+    content: "";
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.18);
+    transition:
+        transform 0.2s ease;
+}
+
+.settings-page .theme-toggle input:checked + .theme-slider {
+    background: #d71920;
+}
+
+.settings-page .theme-toggle input:checked + .theme-slider::before {
+    transform: translateX(21px);
+}
+
+
+/*THEME PREVIEW*/
+.settings-page .theme-preview {
+    width: 100%;
+    margin-top: 22px;
+    padding: 18px;
+    border: 1px solid #e7e7e7;
+    border-radius: 12px;
+    background: #fafafa;
+}
+
+
+.settings-page .theme-preview-card {
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    box-shadow:
+        0 5px 16px rgba(0, 0, 0, 0.06);
+}
+
+
+/*PREVIEW*/
+.settings-page .preview-top {
+    height: 34px;
+    border-bottom: 1px solid #dddddd;
+    background: #ffffff;
+}
+
+.settings-page .preview-content {
+    height: calc(100% - 34px);
+    display: flex;
+}
+
+.settings-page .preview-sidebar {
+    width: 25%;
+    background: #f3f3f3;
+    border-right: 1px solid #dddddd;
+}
+
+.settings-page .preview-main {
+    flex: 1;
+    padding: 20px;
+}
+
+.settings-page .preview-line {
+    width: 60%;
+    height: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: #dddddd;
+}
+
+.settings-page .preview-line.long {
+    width: 82%;
+}
+
+.settings-page .preview-boxes {
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+    gap: 10px;
+}
+
+.settings-page .preview-boxes span {
+    height: 65px;
+    border-radius: 7px;
+    background: #eeeeee;
+}
+
+
+/*LIGHT PREVIEW*/
+.settings-page .light-preview {
+    background: #ffffff;
+}
+
+
+/*DARK PREVIEW*/
+.settings-page .dark-preview {
+    border-color: #38383b;
+
+    background: #202023;
+}
+
+.settings-page .dark-preview .preview-top {
+    background: #29292c;
+    border-color: #38383b;
+}
+
+.settings-page .dark-preview .preview-sidebar {
+    background: #1a1a1c;
+    border-color: #38383b;
+}
+
+.settings-page .dark-preview .preview-line {
+    background: #444447;
+}
+
+.settings-page .dark-preview .preview-boxes span {
+    background: #333336;
+}
+
+
+/*PREVIEW LABEL*/
+.settings-page .theme-preview-label {
+    margin-top: 11px;
+    text-align: center;
+    color: #888888;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/*NOTIFICATION SETTINGS*/
+.settings-page .notification-settings {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+/*MESSAGE*/
+.settings-page .settings-message {
+    width: 100%;
+    margin-top: 20px;
+    padding: 13px 15px;
+    border: 1px solid #cfead8;
+    border-radius: 9px;
+    background: #edf9f1;
+    color: #269451;
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+
+/*DARK MODE*/
+.settings-page.dark-mode .settings-navigation {
+    background: #1d1d1f;
+    border-color: #303033;
+    box-shadow: none;
+}
+
+.settings-page.dark-mode .settings-nav-item {
+    color: #aaaaaa;
+}
+
+.settings-page.dark-mode .settings-nav-item:hover {
+    background: rgba(215, 25, 32, 0.12);
+    color: #ff6469;
+}
+
+.settings-page.dark-mode .settings-nav-item.active {
+    background: #d71920;
+    color: #ffffff;
+}
+
+.settings-page.dark-mode
+.settings-nav-item:not(.active)
+.settings-nav-icon {
+    background: #29292c;
+    color: #999999;
+}
+
+.settings-page.dark-mode
+.settings-nav-item.active
+.settings-nav-icon {
+    background: rgba(255, 255, 255, 0.14);
+    color: #ffffff;
+}
+
+
+/* PANEL */
+.settings-page.dark-mode .settings-panel {
+    background: #1d1d1f;
+    border-color: #303033;
+
+    box-shadow: none;
+}
+
+.settings-page.dark-mode .settings-panel-header {
+    border-color: #303033;
+}
+
+.settings-page.dark-mode .settings-panel-header h3 {
+    color: #f2f2f2;
+}
+
+.settings-page.dark-mode .settings-panel-header p {
+    color: #999999;
+}
+
+
+/* FORM */
+.settings-page.dark-mode .form-field label {
+    color: #dddddd;
+}
+
+.settings-page.dark-mode .form-field input,
+.settings-page.dark-mode .form-field select {
+    background: #252527;
+    border-color: #38383b;
+    color: #f1f1f1;
+}
+
+.settings-page.dark-mode .form-field input:hover,
+.settings-page.dark-mode .form-field select:hover {
+    border-color: #4a4a4d;
+}
+
+.settings-page.dark-mode .form-field input:focus,
+.settings-page.dark-mode .form-field select:focus {
+    border-color: #d71920;
+    box-shadow:
+        0 0 0 3px rgba(215, 25, 32, 0.14);
+}
+
+.settings-page.dark-mode .form-field select {
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23aaaaaa' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+
+/* OPTIONS */
+.settings-page.dark-mode .setting-option {
+    background: #252527;
+    border-color: #38383b;
+}
+
+.settings-page.dark-mode .setting-option:hover {
+    border-color: #48484b;
+}
+
+.settings-page.dark-mode .setting-option-icon {
+    background: rgba(215, 25, 32, 0.12);
+    color: #ff6469;
+}
+
+.settings-page.dark-mode .setting-option-content strong {
+    color: #eeeeee;
+}
+
+.settings-page.dark-mode .setting-option-content span {
+    color: #888888;
+}
+
+
+/* PREVIEW */
+.settings-page.dark-mode .theme-preview {
+    background: #202023;
+    border-color: #303033;
+}
+
+
+/* ACTION */
+.settings-page.dark-mode .form-actions {
+    border-color: #303033;
+}
+
+
+/* MESSAGE */
+.settings-page.dark-mode .settings-message {
+    background: rgba(38, 148, 81, 0.12);
+    border-color: rgba(38, 148, 81, 0.3);
+    color: #63c98c;
+}
+
+
+/*TABLET*/
+@media (max-width: 1000px) {
+    .settings-page .settings-content {
+        padding: 26px 28px 35px;
+    }
+
+    .settings-page .settings-layout {
+        grid-template-columns:
+            220px minmax(0, 1fr);
+
+        gap: 18px;
+    }
+
+    .settings-page .settings-panel {
+        padding: 25px;
+    }
+}
+
+
+/*900px*/
+@media (max-width: 900px) {
+    .settings-page .settings-layout {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .settings-page .settings-navigation {
+        position: static;
+
+        display: grid;
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 7px;
+    }
+
+    .settings-page .settings-nav-item {
+        height: 50px;
+    }
+}
+
+
+/*MOBILE*/
+@media (max-width: 650px) {
+    .settings-page .settings-content {
+        padding: 20px 16px 30px;
+    }
+
+    .settings-page .settings-navigation {
+        display: flex;
+        flex-direction: column;
+        padding: 9px;
+        gap: 5px;
+    }
+
+    .settings-page .settings-nav-item {
+        height: 49px;
+        font-size: 13px;
+    }
+
+    .settings-page .settings-panel {
+        padding: 21px 19px;
+    }
+
+    .settings-page .settings-panel-header {
+        padding-bottom: 18px;
+        margin-bottom: 21px;
+    }
+
+    .settings-page .settings-panel-header h3 {
+        font-size: 18px;
+    }
+
+    .settings-page .settings-panel-header p {
+        font-size: 11px;
+    }
+
+    .settings-page .form-row {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .settings-page .form-field {
+        gap: 7px;
+    }
+
+    .settings-page .form-field label {
+        font-size: 12px;
+    }
+
+    .settings-page .form-field input,
+    .settings-page .form-field select {
+        height: 45px;
+        font-size: 12px;
+    }
+
+    .settings-page .setting-option {
+        padding: 14px;
+        gap: 11px;
+    }
+
+    .settings-page .setting-option-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .settings-page .setting-option-content strong {
+        font-size: 12px;
+    }
+
+    .settings-page .setting-option-content span {
+        font-size: 10px;
+    }
+
+    .settings-page .theme-preview {
+        padding: 12px;
+    }
+
+    .settings-page .theme-preview-card {
+        height: 160px;
+    }
+
+    .settings-page .form-actions {
+        margin-top: 22px;
+        padding-top: 19px;
+
+        justify-content: stretch;
+    }
+
+    .settings-page .primary-button {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+
+/*SMALL MOBILE*/
+@media (max-width: 420px) {
+
+    .settings-page .settings-content {
+        padding: 17px 12px 25px;
+    }
+
+    .settings-page .settings-panel {
+        padding: 18px 16px;
+    }
+
+    .settings-page .settings-nav-item {
+        height: 47px;
+        padding: 0 10px;
+        font-size: 12px;
+    }
+
+    .settings-page .settings-nav-icon {
+        width: 31px;
+        height: 31px;
+    }
+
+    .settings-page .settings-nav-icon svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .settings-page .settings-panel-header h3 {
+        font-size: 16px;
+    }
+
+    .settings-page .form-field input,
+    .settings-page .form-field select {
+        height: 43px;
+        padding-left: 12px;
+        padding-right: 12px;
+        font-size: 12px;
+    }
+
+    .settings-page .primary-button {
+        height: 43px;
+        font-size: 12px;
+    }
+
+    .settings-page .theme-toggle {
+        width: 42px;
+    }
+
+    .settings-page .theme-toggle input:checked + .theme-slider::before {
+        transform: translateX(17px);
+    }
+}

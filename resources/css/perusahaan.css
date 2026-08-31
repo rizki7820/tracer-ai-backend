@@ -1,0 +1,2545 @@
+
+/*ROOT*/
+.company-page {
+    width: 100%;
+    min-height: 100%;
+
+    padding: 34px 36px 48px;
+
+    color: #252525;
+
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.company-page-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 28px;
+    margin-bottom: 30px;
+}
+
+.company-page-header > div {
+    min-width: 0;
+}
+
+.company-page-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 7px 13px;
+
+    border-radius: 7px;
+
+    background: #fff0f1;
+    color: #d71920;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.company-page-header h2 {
+    margin: 11px 0 6px;
+
+    color: #242424;
+
+    font-size: 30px;
+    line-height: 1.25;
+    font-weight: 750;
+
+    letter-spacing: -0.6px;
+}
+
+.company-page-header p {
+    margin: 0;
+
+    color: #7b7f87;
+
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   ADD BUTTON
+========================================================= */
+
+.company-add-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 44px;
+    padding: 0 19px;
+
+    border: 1px solid #d71920;
+    border-radius: 9px;
+
+    background: #d71920;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.company-add-button:hover {
+    background: #bd141b;
+    border-color: #bd141b;
+
+    box-shadow:
+        0 6px 17px rgba(215, 25, 32, 0.18);
+
+    transform: translateY(-1px);
+}
+
+.company-add-button:active {
+    transform: translateY(0);
+}
+
+.company-add-button svg {
+    width: 17px;
+    height: 17px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.company-stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+
+    margin-bottom: 22px;
+}
+
+.company-stat-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 150px;
+
+    padding: 21px 21px 19px;
+
+    border: 1px solid #e9eaed;
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 3px 10px rgba(22, 28, 45, 0.04);
+
+    overflow: hidden;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.company-stat-card::after {
+    content: "";
+
+    position: absolute;
+
+    right: -20px;
+    bottom: -20px;
+
+    width: 82px;
+    height: 82px;
+
+    border-radius: 50%;
+
+    background: rgba(215, 25, 32, 0.025);
+}
+
+.company-stat-card:hover {
+    border-color: #dedfe3;
+
+    box-shadow:
+        0 9px 22px rgba(22, 28, 45, 0.06);
+
+    transform: translateY(-2px);
+}
+
+.company-stat-icon {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 43px;
+    height: 43px;
+
+    margin-bottom: 15px;
+
+    border-radius: 10px;
+}
+
+.company-stat-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.company-stat-icon.red {
+    background: #fff0f1;
+    color: #d71920;
+}
+
+.company-stat-icon.blue {
+    background: #edf5ff;
+    color: #3978d5;
+}
+
+.company-stat-icon.orange {
+    background: #fff6e9;
+    color: #e9932f;
+}
+
+.company-stat-icon.purple {
+    background: #f4efff;
+    color: #7956c8;
+}
+
+.company-stat-card strong {
+    position: relative;
+    z-index: 1;
+
+    color: #252525;
+
+    font-size: 29px;
+    line-height: 1.1;
+
+    font-weight: 750;
+}
+
+.company-stat-card > span {
+    position: relative;
+    z-index: 1;
+
+    margin-top: 6px;
+
+    color: #858992;
+
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   ANALYSIS GRID
+========================================================= */
+
+.company-analysis-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.15fr)
+        minmax(0, 0.85fr);
+
+    gap: 22px;
+
+    margin-bottom: 22px;
+}
+
+.company-analysis-card {
+    min-width: 0;
+
+    padding: 24px;
+
+    border: 1px solid #e9eaed;
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 3px 10px rgba(22, 28, 45, 0.04);
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.company-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 18px;
+
+    margin-bottom: 23px;
+}
+
+.company-card-header h3 {
+    margin: 0 0 5px;
+
+    color: #292929;
+
+    font-size: 16px;
+    line-height: 1.4;
+
+    font-weight: 700;
+}
+
+.company-card-header p {
+    margin: 0;
+
+    color: #90939a;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.company-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 39px;
+    height: 39px;
+
+    flex-shrink: 0;
+
+    border-radius: 9px;
+
+    background: #fff0f1;
+    color: #d71920;
+}
+
+.company-card-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+.company-card-icon.purple-icon {
+    background: #f4efff;
+    color: #7956c8;
+}
+
+
+/* =========================================================
+   TOP COMPANIES
+========================================================= */
+
+.company-top-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.company-top-item {
+    display: grid;
+
+    grid-template-columns:
+        36px
+        minmax(0, 1fr)
+        auto;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #f0f1f3;
+}
+
+.company-top-item:last-child {
+    border-bottom: none;
+
+    padding-bottom: 0;
+}
+
+.company-top-item:first-child {
+    padding-top: 0;
+}
+
+.company-top-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    border-radius: 8px;
+
+    background: #f7f7f8;
+    color: #777b83;
+
+    font-size: 11px;
+    font-weight: 750;
+}
+
+.company-top-item:first-child
+.company-top-number {
+    background: #fff0f1;
+    color: #d71920;
+}
+
+.company-top-info {
+    min-width: 0;
+}
+
+.company-top-info > strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #303030;
+
+    font-size: 12px;
+    font-weight: 650;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.company-top-info > span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #999ca3;
+
+    font-size: 10px;
+}
+
+.company-mini-progress {
+    width: 100%;
+    height: 5px;
+
+    border-radius: 10px;
+
+    background: #f0f1f3;
+
+    overflow: hidden;
+}
+
+.company-mini-progress span {
+    display: block;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: #d71920;
+
+    transition: width 0.35s ease;
+}
+
+.company-top-count {
+    min-width: 40px;
+
+    color: #303030;
+
+    font-size: 14px;
+    font-weight: 750;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   INDUSTRY
+========================================================= */
+
+.company-industry-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 19px;
+}
+
+.company-industry-item {
+    width: 100%;
+}
+
+.company-industry-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 8px;
+}
+
+.company-industry-label span {
+    color: #50535a;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.company-industry-label strong {
+    color: #383a3f;
+
+    font-size: 11px;
+    font-weight: 750;
+}
+
+.company-industry-progress {
+    width: 100%;
+    height: 7px;
+
+    border-radius: 10px;
+
+    background: #f0f1f3;
+
+    overflow: hidden;
+}
+
+.company-industry-progress span {
+    display: block;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: #d71920;
+
+    transition: width 0.35s ease;
+}
+
+.company-industry-item:nth-child(2)
+.company-industry-progress span {
+    background: #e04b51;
+}
+
+.company-industry-item:nth-child(3)
+.company-industry-progress span {
+    background: #e87b80;
+}
+
+.company-industry-item:nth-child(4)
+.company-industry-progress span {
+    background: #ed9da1;
+}
+
+.company-industry-item:nth-child(5)
+.company-industry-progress span {
+    background: #f2bdc0;
+}
+
+.company-industry-item small {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #a0a3a9;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   TABLE CARD
+========================================================= */
+
+.company-table-card {
+    width: 100%;
+
+    border: 1px solid #e9eaed;
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 3px 10px rgba(22, 28, 45, 0.04);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.company-table-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 23px 24px 20px;
+
+    border-bottom: 1px solid #f0f1f3;
+}
+
+.company-table-header h3 {
+    margin: 0 0 5px;
+
+    color: #292929;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.company-table-header p {
+    margin: 0;
+
+    color: #92959b;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   FILTER AREA
+========================================================= */
+
+.company-filter-area {
+    display: grid;
+
+    grid-template-columns:
+        minmax(260px, 1fr)
+        160px
+        150px
+        150px
+        auto;
+
+    gap: 11px;
+
+    padding: 17px 24px;
+
+    background: #fafafa;
+
+    border-bottom: 1px solid #ececef;
+}
+
+.company-search {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+.company-search svg {
+    position: absolute;
+
+    left: 13px;
+
+    width: 16px;
+    height: 16px;
+
+    color: #999da4;
+
+    pointer-events: none;
+}
+
+.company-search input {
+    width: 100%;
+    height: 42px;
+
+    padding: 0 13px 0 39px;
+
+    border: 1px solid #e0e2e6;
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #ffffff;
+    color: #333333;
+
+    font-family: inherit;
+    font-size: 12px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.company-search input::placeholder {
+    color: #a8abb1;
+}
+
+.company-search input:focus {
+    border-color: #d71920;
+
+    box-shadow:
+        0 0 0 3px rgba(215, 25, 32, 0.08);
+}
+
+.company-filter-select {
+    width: 100%;
+    height: 42px;
+
+    padding: 0 31px 0 13px;
+
+    border: 1px solid #e0e2e6;
+    border-radius: 8px;
+
+    outline: none;
+
+    background-color: #ffffff;
+    color: #50535a;
+
+    font-family: inherit;
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.company-filter-select:focus {
+    border-color: #d71920;
+
+    box-shadow:
+        0 0 0 3px rgba(215, 25, 32, 0.08);
+}
+
+.company-reset-button {
+    height: 42px;
+
+    padding: 0 16px;
+
+    border: 1px solid #dedfe3;
+    border-radius: 8px;
+
+    background: #ffffff;
+    color: #676a71;
+
+    font-family: inherit;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.company-reset-button:hover {
+    border-color: #d71920;
+
+    background: #fff7f7;
+
+    color: #d71920;
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.company-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    scrollbar-width: thin;
+}
+
+.company-table-wrapper::-webkit-scrollbar {
+    height: 7px;
+}
+
+.company-table-wrapper::-webkit-scrollbar-track {
+    background: #f7f7f8;
+}
+
+.company-table-wrapper::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+
+    background: #d7d8dc;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.company-table {
+    width: 100%;
+
+    min-width: 1050px;
+
+    border-collapse: collapse;
+
+    table-layout: auto;
+}
+
+.company-table thead {
+    background: #fafafa;
+}
+
+.company-table th {
+    height: 50px;
+
+    padding: 0 16px;
+
+    border-bottom: 1px solid #e9eaed;
+
+    color: #858890;
+
+    font-size: 10px;
+    font-weight: 750;
+
+    letter-spacing: 0.6px;
+
+    text-align: left;
+
+    white-space: nowrap;
+}
+
+.company-table th:first-child,
+.company-table td:first-child {
+    padding-left: 24px;
+}
+
+.company-table th:last-child,
+.company-table td:last-child {
+    padding-right: 24px;
+}
+
+.company-table tbody tr {
+    transition: background 0.15s ease;
+}
+
+.company-table tbody tr:hover {
+    background: #fdfafa;
+}
+
+.company-table td {
+    height: 76px;
+
+    padding: 11px 16px;
+
+    border-bottom: 1px solid #f0f1f3;
+
+    color: #55585f;
+
+    font-size: 12px;
+
+    vertical-align: middle;
+}
+
+.company-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.company-number {
+    width: 50px;
+
+    color: #a0a3a9 !important;
+
+    font-size: 11px !important;
+    font-weight: 650;
+}
+
+
+/* =========================================================
+   COMPANY NAME CELL
+========================================================= */
+
+.company-name-cell {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 235px;
+}
+
+.company-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background: #fff0f1;
+    color: #d71920;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.company-name-cell > div:last-child {
+    min-width: 0;
+}
+
+.company-name-cell strong {
+    display: block;
+
+    max-width: 260px;
+
+    margin-bottom: 4px;
+
+    color: #343434;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.company-name-cell span {
+    display: block;
+
+    color: #9a9da3;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   INDUSTRY BADGE
+========================================================= */
+
+.company-industry-badge {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 27px;
+
+    padding: 0 10px;
+
+    border-radius: 7px;
+
+    background: #f5f5f6;
+    color: #666970;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+.company-location {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: #686b72;
+
+    font-size: 11px;
+}
+
+.company-location svg {
+    width: 15px;
+    height: 15px;
+
+    flex-shrink: 0;
+
+    color: #9a9da4;
+}
+
+
+/* =========================================================
+   ALUMNI COUNT
+========================================================= */
+
+.company-alumni-count {
+    color: #333333;
+
+    font-size: 14px;
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.company-status {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    min-height: 27px;
+
+    padding: 0 10px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+    font-weight: 650;
+
+    white-space: nowrap;
+}
+
+.company-status i {
+    display: block;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+}
+
+.company-status.active {
+    background: #edf9f1;
+    color: #23834b;
+}
+
+.company-status.active i {
+    background: #2ebd67;
+}
+
+.company-status.inactive {
+    background: #f5f5f6;
+    color: #858890;
+}
+
+.company-status.inactive i {
+    background: #a4a7ad;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.company-action-buttons {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    white-space: nowrap;
+}
+
+.company-detail-button,
+.company-edit-button,
+.company-delete-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 34px;
+
+    border-radius: 7px;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition:
+        background 0.18s ease,
+        border-color 0.18s ease,
+        color 0.18s ease;
+}
+
+.company-detail-button {
+    gap: 6px;
+
+    padding: 0 11px;
+
+    border: 1px solid #e0e1e5;
+
+    background: #ffffff;
+    color: #686b72;
+
+    font-size: 10px;
+    font-weight: 650;
+}
+
+.company-detail-button:hover {
+    border-color: #d71920;
+
+    background: #fff7f7;
+
+    color: #d71920;
+}
+
+.company-edit-button,
+.company-delete-button {
+    width: 34px;
+
+    padding: 0;
+
+    border: 1px solid #e0e1e5;
+
+    background: #ffffff;
+}
+
+.company-edit-button {
+    color: #73767d;
+}
+
+.company-edit-button:hover {
+    border-color: #b7c9e8;
+
+    background: #f4f8ff;
+
+    color: #3978d5;
+}
+
+.company-delete-button {
+    color: #8a8d94;
+}
+
+.company-delete-button:hover {
+    border-color: #f0c4c6;
+
+    background: #fff5f5;
+
+    color: #d71920;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.company-empty-row {
+    height: 310px !important;
+
+    text-align: center;
+}
+
+.company-empty-row > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    color: #a0a3aa;
+}
+
+.company-empty-row svg {
+    width: 42px;
+    height: 42px;
+
+    margin-bottom: 5px;
+}
+
+.company-empty-row strong {
+    color: #666970;
+
+    font-size: 13px;
+}
+
+.company-empty-row span {
+    color: #9a9da4;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   PAGINATION
+========================================================= */
+
+.company-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 18px;
+
+    min-height: 64px;
+
+    padding: 0 24px;
+
+    border-top: 1px solid #ececef;
+}
+
+.company-pagination > span {
+    color: #9699a0;
+
+    font-size: 11px;
+}
+
+.company-pagination > span strong {
+    color: #55585f;
+
+    font-weight: 700;
+}
+
+.company-pagination-buttons {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+}
+
+.company-pagination-buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 33px;
+    height: 33px;
+
+    padding: 0;
+
+    border: 1px solid #e0e1e5;
+    border-radius: 7px;
+
+    background: #ffffff;
+    color: #777a81;
+
+    font-family: inherit;
+
+    font-size: 11px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition:
+        background 0.18s ease,
+        border-color 0.18s ease,
+        color 0.18s ease;
+}
+
+.company-pagination-buttons button:hover:not(:disabled) {
+    border-color: #d71920;
+
+    background: #fff7f7;
+
+    color: #d71920;
+}
+
+.company-pagination-buttons button.active {
+    border-color: #d71920;
+
+    background: #d71920;
+
+    color: #ffffff;
+}
+
+.company-pagination-buttons button:disabled {
+    opacity: 0.4;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   MODAL OVERLAY
+========================================================= */
+
+.company-modal-overlay {
+    position: fixed;
+
+    z-index: 9999;
+
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background: rgba(25, 27, 32, 0.46);
+
+    backdrop-filter: blur(2px);
+
+    animation: companyOverlayIn 0.18s ease;
+}
+
+@keyframes companyOverlayIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   DETAIL MODAL
+========================================================= */
+
+.company-detail-modal {
+    width: min(650px, 100%);
+
+    max-height: calc(100vh - 60px);
+
+    border: 1px solid #e5e6e9;
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 24px 60px rgba(24, 27, 35, 0.18),
+        0 5px 17px rgba(24, 27, 35, 0.08);
+
+    overflow: hidden;
+
+    animation: companyModalIn 0.22s ease;
+}
+
+@keyframes companyModalIn {
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(10px)
+            scale(0.985);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.company-modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 25px 25px 20px;
+
+    border-bottom: 1px solid #ececef;
+}
+
+.company-modal-profile {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    min-width: 0;
+}
+
+.company-modal-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 56px;
+    height: 56px;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background: #fff0f1;
+    color: #d71920;
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.company-modal-profile > div:last-child {
+    min-width: 0;
+}
+
+.company-modal-profile span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #d71920;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 0.9px;
+}
+
+.company-modal-profile h3 {
+    max-width: 450px;
+
+    margin: 0 0 4px;
+
+    color: #282828;
+
+    font-size: 20px;
+    line-height: 1.35;
+
+    font-weight: 750;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.company-modal-profile p {
+    margin: 0;
+
+    color: #979aa1;
+
+    font-size: 11px;
+}
+
+.company-modal-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #f5f5f6;
+    color: #74777e;
+
+    font-size: 23px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.18s ease,
+        color 0.18s ease;
+}
+
+.company-modal-close:hover {
+    background: #fff0f1;
+
+    color: #d71920;
+}
+
+
+/* =========================================================
+   MODAL STATUS
+========================================================= */
+
+.company-modal-status {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 15px 25px;
+
+    border-bottom: 1px solid #f0f1f3;
+
+    background: #fafafa;
+}
+
+.company-modal-industry {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 27px;
+
+    padding: 0 10px;
+
+    border-radius: 20px;
+
+    background: #f0f1f3;
+    color: #686b72;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   MODAL CONTENT
+========================================================= */
+
+.company-modal-content {
+    max-height: 490px;
+
+    padding: 23px 25px;
+
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+}
+
+.company-modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.company-modal-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.company-modal-content::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+
+    background: #d7d8dc;
+}
+
+.company-modal-section {
+    padding: 0 0 21px;
+
+    margin-bottom: 21px;
+
+    border-bottom: 1px solid #eff0f2;
+}
+
+.company-modal-section:last-child {
+    padding-bottom: 0;
+
+    margin-bottom: 0;
+
+    border-bottom: none;
+}
+
+.company-modal-section h4 {
+    margin: 0 0 14px;
+
+    color: #3a3c41;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   DETAIL GRID
+========================================================= */
+
+.company-detail-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+.company-detail-grid > div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    padding: 12px 13px;
+
+    border: 1px solid #ececef;
+    border-radius: 9px;
+
+    background: #fafafa;
+}
+
+.company-detail-grid span {
+    color: #999ca3;
+
+    font-size: 10px;
+}
+
+.company-detail-grid strong {
+    color: #44464c;
+
+    font-size: 11.5px;
+    font-weight: 650;
+}
+
+
+/* =========================================================
+   ADDRESS
+========================================================= */
+
+.company-address {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    padding: 13px 14px;
+
+    border: 1px solid #ececef;
+    border-radius: 9px;
+
+    background: #fafafa;
+
+    color: #62656c;
+
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.company-address svg {
+    width: 16px;
+    height: 16px;
+
+    flex-shrink: 0;
+
+    margin-top: 1px;
+
+    color: #d71920;
+}
+
+
+/* =========================================================
+   WEBSITE
+========================================================= */
+
+.company-website {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 13px 14px;
+
+    border: 1px solid #ececef;
+    border-radius: 9px;
+
+    background: #fafafa;
+
+    color: #3978d5;
+
+    font-size: 11px;
+
+    word-break: break-all;
+}
+
+.company-website svg {
+    width: 16px;
+    height: 16px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   ALUMNI SUMMARY
+========================================================= */
+
+.company-alumni-summary {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+.company-alumni-summary > div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    padding: 16px;
+
+    border-radius: 10px;
+
+    background: #f8f8f9;
+}
+
+.company-alumni-summary > div:first-child {
+    background: #fff5f5;
+}
+
+.company-alumni-summary strong {
+    color: #34363b;
+
+    font-size: 22px;
+    line-height: 1.2;
+
+    font-weight: 750;
+}
+
+.company-alumni-summary > div:first-child strong {
+    color: #d71920;
+}
+
+.company-alumni-summary span {
+    color: #92959c;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   MODAL FOOTER
+========================================================= */
+
+.company-modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 9px;
+
+    padding: 16px 25px;
+
+    border-top: 1px solid #ececef;
+
+    background: #fafafa;
+}
+
+.company-modal-edit,
+.company-modal-close-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    height: 38px;
+
+    padding: 0 15px;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    font-size: 11px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition:
+        background 0.18s ease,
+        border-color 0.18s ease,
+        color 0.18s ease;
+}
+
+.company-modal-edit {
+    border: 1px solid #d71920;
+
+    background: #d71920;
+    color: #ffffff;
+}
+
+.company-modal-edit:hover {
+    border-color: #bd141b;
+
+    background: #bd141b;
+}
+
+.company-modal-close-button {
+    border: 1px solid #dedfe3;
+
+    background: #ffffff;
+    color: #666970;
+}
+
+.company-modal-close-button:hover {
+    border-color: #cfd0d4;
+
+    background: #f4f4f5;
+}
+
+
+/* =========================================================
+   FORM MODAL
+========================================================= */
+
+.company-form-modal {
+    width: min(700px, 100%);
+
+    max-height: calc(100vh - 60px);
+
+    border: 1px solid #e5e6e9;
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 24px 60px rgba(24, 27, 35, 0.18),
+        0 5px 17px rgba(24, 27, 35, 0.08);
+
+    overflow: hidden;
+
+    animation: companyModalIn 0.22s ease;
+}
+
+
+/* =========================================================
+   FORM HEADER
+========================================================= */
+
+.company-form-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 24px 25px 21px;
+
+    border-bottom: 1px solid #ececef;
+}
+
+.company-form-header > div {
+    min-width: 0;
+}
+
+.company-form-header span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #d71920;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 0.9px;
+}
+
+.company-form-header h3 {
+    margin: 0 0 5px;
+
+    color: #292929;
+
+    font-size: 20px;
+    font-weight: 750;
+}
+
+.company-form-header p {
+    margin: 0;
+
+    color: #979aa1;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.company-form {
+    display: flex;
+    flex-direction: column;
+
+    max-height: calc(100vh - 170px);
+}
+
+.company-form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 17px;
+
+    padding: 23px 25px;
+
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+}
+
+.company-form-grid::-webkit-scrollbar {
+    width: 6px;
+}
+
+.company-form-grid::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.company-form-grid::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+
+    background: #d7d8dc;
+}
+
+.company-form-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+
+    min-width: 0;
+}
+
+.company-form-group.full {
+    grid-column: 1 / -1;
+}
+
+.company-form-group label {
+    color: #55585f;
+
+    font-size: 11px;
+    font-weight: 650;
+}
+
+.company-form-group input,
+.company-form-group select,
+.company-form-group textarea {
+    width: 100%;
+
+    border: 1px solid #dfe1e5;
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #ffffff;
+    color: #3e4045;
+
+    font-family: inherit;
+    font-size: 12px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.company-form-group input,
+.company-form-group select {
+    height: 43px;
+
+    padding: 0 13px;
+}
+
+.company-form-group textarea {
+    min-height: 95px;
+
+    padding: 11px 13px;
+
+    resize: vertical;
+
+    line-height: 1.55;
+}
+
+.company-form-group input::placeholder,
+.company-form-group textarea::placeholder {
+    color: #a8abb1;
+}
+
+.company-form-group input:focus,
+.company-form-group select:focus,
+.company-form-group textarea:focus {
+    border-color: #d71920;
+
+    box-shadow:
+        0 0 0 3px rgba(215, 25, 32, 0.08);
+}
+
+.company-form-group select {
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   FORM FOOTER
+========================================================= */
+
+.company-form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 9px;
+
+    padding: 16px 25px;
+
+    border-top: 1px solid #ececef;
+
+    background: #fafafa;
+}
+
+.company-cancel-button,
+.company-save-button {
+    height: 39px;
+
+    padding: 0 16px;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    font-size: 11px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition:
+        background 0.18s ease,
+        border-color 0.18s ease,
+        color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.company-cancel-button {
+    border: 1px solid #dedfe3;
+
+    background: #ffffff;
+    color: #686b72;
+}
+
+.company-cancel-button:hover {
+    border-color: #cfd0d4;
+
+    background: #f4f4f5;
+}
+
+.company-save-button {
+    border: 1px solid #d71920;
+
+    background: #d71920;
+    color: #ffffff;
+}
+
+.company-save-button:hover {
+    border-color: #bd141b;
+
+    background: #bd141b;
+
+    box-shadow:
+        0 6px 15px rgba(215, 25, 32, 0.16);
+}
+
+
+/* =========================================================
+   FOCUS ACCESSIBILITY
+========================================================= */
+
+.company-page button:focus-visible,
+.company-page input:focus-visible,
+.company-page select:focus-visible,
+.company-page textarea:focus-visible {
+    outline: 2px solid rgba(215, 25, 32, 0.35);
+
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   RESPONSIVE - LARGE TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .company-page {
+        padding: 30px 28px 42px;
+    }
+
+    .company-stats-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .company-analysis-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .company-filter-area {
+        grid-template-columns:
+            minmax(240px, 1fr)
+            repeat(2, minmax(140px, 1fr));
+    }
+
+    .company-reset-button {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .company-page {
+        padding: 26px 22px 38px;
+    }
+
+    .company-page-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .company-add-button {
+        width: auto;
+    }
+
+    .company-filter-area {
+        grid-template-columns:
+            1fr
+            1fr;
+    }
+
+    .company-search {
+        grid-column: 1 / -1;
+    }
+
+    .company-reset-button {
+        grid-column: 1 / -1;
+    }
+
+    .company-table {
+        min-width: 1000px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - SMALL TABLET
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .company-page {
+        padding: 23px 18px 32px;
+    }
+
+    .company-page-header {
+        margin-bottom: 22px;
+    }
+
+    .company-page-header h2 {
+        font-size: 26px;
+    }
+
+    .company-page-header p {
+        font-size: 12px;
+    }
+
+    .company-add-button {
+        width: 100%;
+
+        min-height: 43px;
+    }
+
+    .company-stats-grid {
+        gap: 12px;
+
+        margin-bottom: 17px;
+    }
+
+    .company-stat-card {
+        min-height: 135px;
+
+        padding: 17px;
+    }
+
+    .company-stat-icon {
+        width: 39px;
+        height: 39px;
+
+        margin-bottom: 12px;
+    }
+
+    .company-stat-card strong {
+        font-size: 25px;
+    }
+
+    .company-stat-card > span {
+        font-size: 10px;
+    }
+
+    .company-analysis-grid {
+        gap: 17px;
+
+        margin-bottom: 17px;
+    }
+
+    .company-analysis-card {
+        padding: 20px;
+    }
+
+    .company-card-header h3 {
+        font-size: 14px;
+    }
+
+    .company-card-header p {
+        font-size: 10px;
+    }
+
+    .company-filter-area {
+        grid-template-columns: 1fr;
+
+        gap: 9px;
+
+        padding: 14px;
+    }
+
+    .company-search,
+    .company-reset-button {
+        grid-column: auto;
+    }
+
+    .company-filter-select,
+    .company-search input,
+    .company-reset-button {
+        height: 41px;
+    }
+
+    .company-pagination {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .company-pagination-buttons {
+        align-self: flex-end;
+    }
+
+    .company-modal-overlay {
+        align-items: flex-end;
+
+        padding: 0;
+    }
+
+    .company-detail-modal,
+    .company-form-modal {
+        width: 100%;
+
+        max-height: 94vh;
+
+        border-radius:
+            17px
+            17px
+            0
+            0;
+    }
+
+    .company-modal-header,
+    .company-form-header {
+        padding: 20px;
+    }
+
+    .company-modal-profile h3 {
+        max-width: 280px;
+
+        font-size: 17px;
+    }
+
+    .company-modal-logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .company-modal-status {
+        padding: 13px 20px;
+    }
+
+    .company-modal-content {
+        max-height:
+            calc(94vh - 205px);
+
+        padding: 19px 20px;
+    }
+
+    .company-detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .company-alumni-summary {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .company-modal-footer {
+        padding: 14px 20px;
+    }
+
+    .company-form {
+        max-height:
+            calc(94vh - 135px);
+    }
+
+    .company-form-grid {
+        grid-template-columns: 1fr;
+
+        padding: 20px;
+    }
+
+    .company-form-group.full {
+        grid-column: auto;
+    }
+
+    .company-form-footer {
+        padding: 14px 20px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .company-page {
+        padding: 20px 14px 28px;
+    }
+
+    .company-page-header {
+        gap: 16px;
+
+        margin-bottom: 20px;
+    }
+
+    .company-page-header h2 {
+        font-size: 23px;
+    }
+
+    .company-page-header p {
+        max-width: 96%;
+
+        font-size: 11px;
+    }
+
+    .company-page-badge {
+        padding: 6px 10px;
+
+        font-size: 9px;
+    }
+
+    .company-stats-grid {
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 10px;
+    }
+
+    .company-stat-card {
+        min-height: 125px;
+
+        padding: 15px;
+    }
+
+    .company-stat-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .company-stat-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .company-stat-card strong {
+        font-size: 22px;
+    }
+
+    .company-stat-card > span {
+        font-size: 9px;
+    }
+
+    .company-analysis-card {
+        padding: 17px;
+    }
+
+    .company-card-header {
+        margin-bottom: 18px;
+    }
+
+    .company-card-header h3 {
+        font-size: 13px;
+    }
+
+    .company-card-header p {
+        font-size: 9.5px;
+    }
+
+    .company-card-icon {
+        width: 33px;
+        height: 33px;
+    }
+
+    .company-top-item {
+        grid-template-columns:
+            31px
+            minmax(0, 1fr)
+            auto;
+
+        gap: 9px;
+    }
+
+    .company-top-number {
+        width: 31px;
+        height: 31px;
+    }
+
+    .company-top-info > strong {
+        font-size: 10.5px;
+    }
+
+    .company-top-info > span {
+        font-size: 9px;
+    }
+
+    .company-top-count {
+        font-size: 12px;
+    }
+
+    .company-industry-list {
+        gap: 15px;
+    }
+
+    .company-industry-label span {
+        font-size: 10.5px;
+    }
+
+    .company-industry-label strong {
+        font-size: 10px;
+    }
+
+    .company-table-header {
+        padding: 18px;
+    }
+
+    .company-table-header h3 {
+        font-size: 14px;
+    }
+
+    .company-table-header p {
+        font-size: 10px;
+    }
+
+    .company-filter-area {
+        padding: 13px;
+    }
+
+    .company-pagination {
+        padding-right: 14px;
+        padding-left: 14px;
+    }
+
+    .company-pagination-buttons {
+        align-self: stretch;
+
+        justify-content: flex-end;
+    }
+
+    .company-modal-profile h3 {
+        max-width: 220px;
+
+        font-size: 15px;
+    }
+
+    .company-modal-logo {
+        width: 44px;
+        height: 44px;
+    }
+
+    .company-modal-header,
+    .company-form-header {
+        padding: 17px;
+    }
+
+    .company-modal-status {
+        padding: 12px 17px;
+    }
+
+    .company-modal-content {
+        padding: 17px;
+    }
+
+    .company-modal-footer {
+        padding: 12px 17px;
+    }
+
+    .company-form-grid {
+        padding: 17px;
+    }
+
+    .company-form-footer {
+        padding: 12px 17px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .company-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .company-stat-card {
+        min-height: 112px;
+    }
+
+    .company-alumni-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .company-modal-footer {
+        flex-direction: column-reverse;
+    }
+
+    .company-modal-edit,
+    .company-modal-close-button {
+        width: 100%;
+    }
+
+    .company-form-footer {
+        flex-direction: column-reverse;
+    }
+
+    .company-cancel-button,
+    .company-save-button {
+        width: 100%;
+    }
+}
