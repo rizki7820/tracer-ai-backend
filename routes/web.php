@@ -13,15 +13,11 @@ Route::get('/', function () {
     return redirect('/login');
 });
 
-Route::get('/debug-routes', function () {
-    return response()->json(
-        collect(app('router')->getRoutes())->map(function ($route) {
-            return [
-                'methods' => $route->methods(),
-                'uri' => $route->uri(),
-            ];
-        })->values()
-    );
+Route::get('/api/v1/jobs', function () {
+    return response()->json([
+        'debug' => 'WEB ROUTE KENA',
+        'message' => 'Request /api/v1/jobs berhasil sampai Laravel'
+    ]);
 });
 
 
