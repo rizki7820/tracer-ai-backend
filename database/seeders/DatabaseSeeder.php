@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             AdminSeeder::class,
             JobVacancySeeder::class,
             ScholarshipSeeder::class,
+            JuriSeeder::class,
         ]);
     }
 }
