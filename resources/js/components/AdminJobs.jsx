@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import AdminLayout from './AdminLayout'
 
-const API_BASE = '/api/v1/admin/jobs'
+const API_BASE = 'backend/api/v1/admin/jobs'
 
 function authHeaders() {
     const token = localStorage.getItem('tracer_token')

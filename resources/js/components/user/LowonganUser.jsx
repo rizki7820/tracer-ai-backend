@@ -5,7 +5,7 @@ import UserLayout from './UserLayout'
    API HELPERS
    ========================================================= */
 
-const API_BASE = '/api/v1'
+const API_BASE = 'backend/api/v1'
 
 function authHeaders() {
     const token = localStorage.getItem('tracer_token')

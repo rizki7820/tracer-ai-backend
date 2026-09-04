@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-const API_BASE = '/api/v1/auth'
+const API_BASE = '/backend/api/v1/auth'
 
 export default function Login({ initialMode = 'login' }) {
 
