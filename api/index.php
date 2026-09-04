@@ -4,18 +4,24 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $app = require_once __DIR__ . '/../bootstrap/app.php';
 
+$storagePath = '/tmp/storage';
+
+foreach ([
+    $storagePath,
+    $storagePath . '/app',
+    $storagePath . '/framework',
+    $storagePath . '/framework/cache',
+    $storagePath . '/framework/sessions',
+    $storagePath . '/framework/views',
+    $storagePath . '/logs',
+] as $directory) {
+    if (!is_dir($directory)) {
+        mkdir($directory, 0755, true);
+    }
+}
+
+$app->useStoragePath($storagePath);
+
 $request = Illuminate\Http\Request::capture();
 
-try {
-    $response = $app->handleRequest($request);
-    $response->send();
-} catch (\Throwable $e) {
-    http_response_code(500);
-
-    echo '<pre>';
-    echo get_class($e) . "\n\n";
-    echo $e->getMessage() . "\n\n";
-    echo $e->getFile() . ':' . $e->getLine() . "\n\n";
-    echo $e->getTraceAsString();
-    echo '</pre>';
-}
+$app->handleRequest($request);
