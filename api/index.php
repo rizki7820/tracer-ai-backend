@@ -1,20 +1,17 @@
 <?php
 
-// 1. Alihkan folder storage bawaan Laravel ke folder /tmp Vercel yang writable
-$storagePath = '/tmp/storage/framework';
-if (!is_dir($storagePath . '/views')) {
-    mkdir($storagePath . '/views', 0755, true);
-}
-if (!is_dir($storagePath . '/cache')) {
-    mkdir($storagePath . '/cache', 0755, true);
-}
-if (!is_dir($storagePath . '/sessions')) {
-    mkdir($storagePath . '/sessions', 0755, true);
-}
+// Menghubungkan ke autoloader bawaan Composer
+require __DIR__ . '/../vendor/autoload.php';
 
-// 2. Set environment variabel agar Laravel tahu foldernya dipindah
-$_ENV['APP_STORAGE'] = '/tmp/storage';
-$_ENV['VIEW_COMPILED_PATH'] = '/tmp/storage/framework/views';
+// Menjalankan aplikasi Laravel
+$app = require_once __DIR__ . '/../bootstrap/app.php';
 
-// 3. Panggil core aplikasi Laravel
-require __DIR__ . '/../public/index.php';
+$kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
+
+$response = $kernel->handle(
+    $request = Illuminate\Http\Request::capture()
+);
+
+$response->send();
+
+$kernel->terminate($request, $response);
