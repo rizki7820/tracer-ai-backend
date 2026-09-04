@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use Illuminate\Http\Request;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -11,6 +13,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return redirect('/login');
+});
+
+
+Route::fallback(function (Request $request) {
+    return response()->json([
+        'method'       => $request->method(),
+        'path'         => $request->path(),
+        'full_url'     => $request->fullUrl(),
+        'request_uri'  => $_SERVER['REQUEST_URI'] ?? null,
+        'path_info'    => $_SERVER['PATH_INFO'] ?? null,
+        'script_name'  => $_SERVER['SCRIPT_NAME'] ?? null,
+        'query_string' => $_SERVER['QUERY_STRING'] ?? null,
+    ], 404);
 });
 
 Route::get('/debug-routes', function () {
