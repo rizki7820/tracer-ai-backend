@@ -13,6 +13,17 @@ Route::get('/', function () {
     return redirect('/login');
 });
 
+Route::get('/debug-routes', function () {
+    return response()->json(
+        collect(app('router')->getRoutes())->map(function ($route) {
+            return [
+                'methods' => $route->methods(),
+                'uri' => $route->uri(),
+            ];
+        })->values()
+    );
+});
+
 
 /*
 |--------------------------------------------------------------------------
