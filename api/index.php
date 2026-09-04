@@ -4,9 +4,16 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $app = require_once __DIR__ . '/../bootstrap/app.php';
 
-$storagePath = '/tmp/storage';
+/*
+|--------------------------------------------------------------------------
+| Vercel Writable Directories
+|--------------------------------------------------------------------------
+*/
 
-foreach ([
+$storagePath = '/tmp/storage';
+$bootstrapPath = '/tmp/bootstrap';
+
+$directories = [
     $storagePath,
     $storagePath . '/app',
     $storagePath . '/framework',
@@ -14,13 +21,31 @@ foreach ([
     $storagePath . '/framework/sessions',
     $storagePath . '/framework/views',
     $storagePath . '/logs',
-] as $directory) {
+
+    $bootstrapPath,
+    $bootstrapPath . '/cache',
+];
+
+foreach ($directories as $directory) {
     if (!is_dir($directory)) {
         mkdir($directory, 0755, true);
     }
 }
 
+/*
+|--------------------------------------------------------------------------
+| Redirect Laravel writable paths
+|--------------------------------------------------------------------------
+*/
+
 $app->useStoragePath($storagePath);
+$app->useBootstrapPath($bootstrapPath);
+
+/*
+|--------------------------------------------------------------------------
+| Handle Request
+|--------------------------------------------------------------------------
+*/
 
 $request = Illuminate\Http\Request::capture();
 
